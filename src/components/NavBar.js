@@ -23,6 +23,10 @@ const navLinks = [
     name: "Retailers",
     links: "/",
   },
+  {
+    name: "Blogs",
+    links: "/blogs",
+  },
 ];
 function NavBar() {
   return (

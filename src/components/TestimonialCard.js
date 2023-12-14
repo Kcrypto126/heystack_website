@@ -2,8 +2,8 @@
 import React from "react";
 import Carousel from "better-react-carousel";
 import Image from "next/image";
-import testimonial from "@/app/constants/testimonial";
-import { TestimonialBreakPoints } from "@/app/constants/breakpoints";
+import testimonial from "@/constants/testimonial";
+import { TestimonialBreakPoints } from "@/constants/breakpoints";
 
 function TestimonialCard() {
   return (

@@ -1,4 +1,4 @@
-import work from "@/app/constants/work";
+import work from "@/constants/work";
 import Image from "next/image";
 import React from "react";
 

@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import brands from "@/app/constants/brands";
-import { brandsBreakPoint } from "@/app/constants/breakpoints";
+import brands from "@/constants/brands";
+import { brandsBreakPoint } from "@/constants/breakpoints";
 import Carousel from "better-react-carousel";
 
 const Carousal = () => {

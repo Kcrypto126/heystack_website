@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Carousel from "better-react-carousel";
-import partners from "../app/constants/partners";
+import partners from "../constants/partners";
 import Image from "next/image";
-import { Retailbreakpoints } from "@/app/constants/breakpoints";
+import { Retailbreakpoints } from "@/constants/breakpoints";
 
 function RetailPartner() {
   return (

@@ -10,9 +10,6 @@ import Work from "@/components/Work";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      <div className="sticky inset-0 lg:hidden block  w-full z-50">
-        <MobileNavBar />
-      </div>
       <Herosection />
       <Tab />
       <Brands />

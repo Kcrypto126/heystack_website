@@ -1,36 +1,63 @@
 "use client";
 import { FeaturedPost, PostCard } from "@/components/Blogs";
-import React, { useEffect, useState } from "react";
-import { getPosts } from "@/services";
+import React, { useState } from "react";
+import { GET_ALL_POST } from "@/services/queries";
+import { useSuspenseQuery } from "@apollo/client";
+import Paginate from "@/utils/paginate";
+import { posts } from "@/constants/dummy";
+import Tab from "@/components/Tab";
 
 const page = () => {
-  const [Posts, setPosts] = useState([]);
-  const getPostsData = async () => {
-    const posts = (await getPosts()) || [];
-    setPosts(posts);
-    console.log(posts);
-    return {
-      props: posts,
-    };
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
+
+  const Posts = data?.postsConnection?.edges;
+  // const Posts = posts;
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = Posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
-  useEffect(() => {
-    getPostsData();
-  }, []);
+  const previousPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage !== Math.ceil(Posts.length / postsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
   return (
     <div>
-      <h1>Hey-Stack Blogs</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam iure
-        maiores harum voluptatibus culpa, temporibus amet ut. Obcaecati, magni
-        aspernatur.
-      </p>
-      <FeaturedPost />
-      <div>
-        {Posts.map(({ node }) => {
-          return <PostCard key={node?.title} post={node} />;
-        })}
+      <FeaturedPost post={Posts[0]} />
+      <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
+        {!loading && !error ? (
+          currentPosts.map(({ cursor, node }) => {
+            return <PostCard key={cursor} post={node} />;
+          })
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
+      <Paginate
+        postsPerPage={postsPerPage}
+        totalPosts={Posts.length}
+        currentPage={currentPage}
+        paginate={paginate}
+        previousPage={previousPage}
+        nextPage={nextPage}
+      />
+
+      <Tab />
     </div>
   );
 };

@@ -5,29 +5,7 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const navLinks = [
-  {
-    name: "Home",
-    links: "/",
-  },
-  {
-    name: "Customers",
-    links: "/",
-  },
-  {
-    name: "Products",
-    links: "/",
-  },
-  {
-    name: "Technology",
-    links: "/",
-  },
-  {
-    name: "Retailers",
-    links: "/",
-  },
-];
-
+import { navLinks } from "@/constants/navlinks";
 const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full">

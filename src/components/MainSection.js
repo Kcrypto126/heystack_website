@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function MainSection() {
   return (
-    <div className="lg:mt-20 pt-5 ">
+    <div className=" pt-5 ">
       <Image
         width={"100"}
         height={"100"}

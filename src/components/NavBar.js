@@ -2,32 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const navLinks = [
-  {
-    name: "Home",
-    links: "/",
-  },
-  {
-    name: "Customers",
-    links: "/",
-  },
-  {
-    name: "Products",
-    links: "/",
-  },
-  {
-    name: "Technology",
-    links: "/",
-  },
-  {
-    name: "Retailers",
-    links: "/",
-  },
-  {
-    name: "Blogs",
-    links: "/blogs",
-  },
-];
+import { navLinks } from "@/constants/navlinks";
 function NavBar() {
   return (
     <nav className="w-full lg:block hidden">

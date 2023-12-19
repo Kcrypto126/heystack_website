@@ -4,18 +4,19 @@ import React, { useState } from "react";
 import { GET_ALL_POST } from "@/services/queries";
 import { useSuspenseQuery } from "@apollo/client";
 import Paginate from "@/utils/paginate";
-import { posts } from "@/constants/dummy";
+import { ALL_POSTS, posts } from "@/constants/dummy";
 import Tab from "@/components/Tab";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
 
-  const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
+  // const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
+  // const Posts = data?.postsConnection?.edges;
 
-  const Posts = data?.postsConnection?.edges;
-  // const Posts = posts;
-
+  // test - data;
+  const Posts = ALL_POSTS.data.postsConnection.edges;
+  const { loading, error } = false;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = Posts.slice(indexOfFirstPost, indexOfLastPost);

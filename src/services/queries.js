@@ -14,6 +14,9 @@ export const GET_ALL_POST = gql`
           summary
           author {
             name
+            id
+            twitter
+            linkedIn
             photo {
               url
             }

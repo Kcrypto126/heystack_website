@@ -90,6 +90,17 @@ export const renderers = {
   p: ({ children }) => (
     <p className={`my-4 text-lg ${bodyClasses} ${sharedClasses}`}>{children}</p>
   ),
+  a: ({ children, href, openInNewTab, title }) => (
+    <a
+      href={href}
+      target={openInNewTab ? "_blank" : "_self"}
+      style={{ textDecoration: "underline", color: "blue" }}
+      rel="noreferrer"
+      title={title}
+    >
+      {children}
+    </a>
+  ),
   ul: ({ children }) => (
     <ul
       className={`list-disc list-inside my-4 text-lg ${bodyClasses} ${sharedClasses}`}
@@ -100,12 +111,16 @@ export const renderers = {
   ol: ({ children }) => (
     <ol
       className={`list-decimal list-inside my-4 text-lg ${bodyClasses} ${sharedClasses}`}
+      style={{ listStyleType: "decimal" }}
     >
       {children}
     </ol>
   ),
   li: ({ children }) => (
-    <li className={`my-2 text-lg ${bodyClasses} ${sharedClasses}`}>
+    <li
+      className={`my-2 list-disc text-lg ${bodyClasses} ${sharedClasses}`}
+      style={{ listStyleType: "disc" }}
+    >
       {children}
     </li>
   ),
@@ -117,10 +132,15 @@ export const renderers = {
     </code>
   ),
   code_block: ({ children }) => (
-    <pre>
-      <code
-        className={`bg-gray-600 dark:bg-gray-800 overflow-y-scroll rounded-md p-2 text-sm ${sharedClasses}`}
-      >
+    <pre
+      style={{
+        background: "black",
+        color: "white",
+        overflowY: "scroll",
+      }}
+      className="px-4 py-8 rounded-lg my-10 "
+    >
+      <code className={`bg-primary rounded-md p-2 text-sm ${sharedClasses}`}>
         {children}
       </code>
     </pre>
@@ -135,10 +155,40 @@ export const renderers = {
     />
   ),
   blockquote: ({ children }) => (
-    <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+    <blockquote
+      className="p-4 my-6 border-4  bg-gray-50 rounded-md "
+      style={{
+        borderColor: "gray",
+        borderWidth: 1,
+        backgroundColor: "lightgray",
+      }}
+    >
       <p className="text-lg italic font-medium leading-relaxed text-gray-900 dark:text-white">
         {children}
       </p>
     </blockquote>
+  ),
+  table: ({ children }) => (
+    <table className="min-w-full flex items-center justify-center flex-col my-10 divide-y divide-gray-200 dark:divide-gray-700">
+      {children}
+    </table>
+  ),
+  table_head: ({ children }) => (
+    <thead
+      className="divide-y divide-gray-200 dark:divide-gray-70 "
+      style={{ background: "lightgray" }}
+    >
+      {children}
+    </thead>
+  ),
+  table_header_cell: ({ children }) => (
+    <th className="px-6 py-4">{children}</th>
+  ),
+  table_body: ({ children }) => <tbody>{children}</tbody>,
+  table_row: ({ children }) => <tr>{children}</tr>,
+  table_cell: ({ children }) => (
+    <td className="px-6 py-4  text-sm font-medium text-gray-800 dark:text-gray-200">
+      {children}
+    </td>
   ),
 };

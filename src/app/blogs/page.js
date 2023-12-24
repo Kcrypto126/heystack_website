@@ -11,12 +11,12 @@ const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
 
-  // const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
-  // const Posts = data?.postsConnection?.edges;
+  const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
+  const Posts = data?.postsConnection?.edges;
 
   // test - data;
-  const Posts = ALL_POSTS.data.postsConnection.edges;
-  const { loading, error } = false;
+  // const Posts = ALL_POSTS.data.postsConnection.edges;
+  // const { loading, error } = false;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = Posts.slice(indexOfFirstPost, indexOfLastPost);

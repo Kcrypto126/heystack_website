@@ -1,8 +1,11 @@
 import React from "react";
+import { motion, useScroll } from "framer-motion";
 
 const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <div>
+    <>
       <div className=" bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-xl py-7 px-5 lg:h-[35rem]">
         <div className="flex flex-row items-center">
           <button className="border border-white px-4 py-1 rounded-lg mr-2 text-white cursor-pointer hover:bg-slate-500 hover:bg-opacity-10 transition-all duration-75">
@@ -26,7 +29,16 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
         />
       </div>
       <p className="font-bold text-xl lg:mt-24 py-4">{_summary}</p>
-    </div>
+      <motion.div
+        className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] "
+        style={{
+          scaleX: scrollYProgress,
+        }}
+      />
+      <div className="my-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-md py-2 px-2  text-white text-center font-semibold">
+        {_title}
+      </div>
+    </>
   );
 };
 

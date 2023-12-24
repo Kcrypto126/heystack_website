@@ -26,6 +26,52 @@ export const ALL_POSTS = {
           },
         },
         {
+          cursor: "clpsq61fu01ih0cpkgowj4bcn",
+          node: {
+            slug: "artificial-intelligence-ai-stands-as-the-pinnacle-of-human-innovation",
+            summary:
+              "Leaks show that OpenAI will be unveiling major updates to ChatGPT at its developer conference on 6 November. These include custom chatbots.",
+            title:
+              "Artificial Intelligence (AI) stands as the pinnacle of human innovation",
+            coverImage: {
+              url: "https://media.graphassets.com/RVAxFT8nRQu9gI9N9IID",
+            },
+            author: {
+              id: "clpsph1qs018g0cpkc3k39r59",
+              linkedIn: null,
+              name: "Hey-Stack",
+              photo: {
+                url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+              },
+              twitter: null,
+            },
+            date: "2023-12-06",
+          },
+        },
+        {
+          cursor: "clpsq61fu01ih0cpkgowj4bcn",
+          node: {
+            slug: "artificial-intelligence-ai-stands-as-the-pinnacle-of-human-innovation",
+            summary:
+              "Leaks show that OpenAI will be unveiling major updates to ChatGPT at its developer conference on 6 November. These include custom chatbots.",
+            title:
+              "Artificial Intelligence (AI) stands as the pinnacle of human innovation",
+            coverImage: {
+              url: "https://media.graphassets.com/RVAxFT8nRQu9gI9N9IID",
+            },
+            author: {
+              id: "clpsph1qs018g0cpkc3k39r59",
+              linkedIn: null,
+              name: "Hey-Stack",
+              photo: {
+                url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+              },
+              twitter: null,
+            },
+            date: "2023-12-06",
+          },
+        },
+        {
           cursor: "clq5ffr3f02ba0coavdd3wpuo",
           node: {
             slug: "unraveling-the-tapestry-of-network-engineering-building-the-backbone-of-connectivity",
@@ -300,7 +346,31 @@ export const POSTS = {
                     type: "paragraph",
                     children: [
                       {
-                        text: "At its core, network engineering is about designing, implementing, and managing the infrastructure that enables communication between devices, systems, and users. Think of it as the backbone of the digital world, shaping how information flows from one point to another, regardless of geographical boundaries.",
+                        text: "At its core, ",
+                      },
+                      {
+                        href: "https://durgaa.netlify.app/",
+                        type: "link",
+                        children: [
+                          {
+                            text: "network",
+                          },
+                        ],
+                      },
+                      {
+                        text: " engineering is about designing, implementing, and managing the infrastructure that enables communication between devices, systems, and users. Think of it as the backbone of the digital world, shaping how information flows from one ",
+                      },
+                      {
+                        href: "https://durgaa.netlify.app/",
+                        type: "link",
+                        children: [
+                          {
+                            text: "point",
+                          },
+                        ],
+                      },
+                      {
+                        text: " to another, regardless of geographical boundaries.",
                       },
                     ],
                   },
@@ -331,7 +401,19 @@ export const POSTS = {
                     type: "heading-three",
                     children: [
                       {
-                        text: "Evolution and Complexity",
+                        text: "",
+                      },
+                      {
+                        href: "https://app.hygraph.com/5faef0f5b3d84b098f1d135d85de5915/master/content/f47d731925e54c4da9de0496ef0ed794/view/65a46dced9904c17a8404a7dc009d464/clq5ffr3f02ba0coavdd3wpuo",
+                        type: "link",
+                        children: [
+                          {
+                            text: "Evolution and Complexity",
+                          },
+                        ],
+                      },
+                      {
+                        text: "",
                       },
                     ],
                   },
@@ -363,8 +445,17 @@ export const POSTS = {
                     type: "paragraph",
                     children: [
                       {
-                        text: "Understanding",
-                        italic: true,
+                        text: "",
+                      },
+                      {
+                        href: "https://durgaa.netlify.app/",
+                        type: "link",
+                        children: [
+                          {
+                            text: "Understanding",
+                            italic: true,
+                          },
+                        ],
                       },
                       {
                         text: " the fundamentals is crucial in network engineering. Components like routers, switches, firewalls, and protocols serve as the building blocks of any network. Engineers meticulously design these components to ensure ",
@@ -399,18 +490,19 @@ export const POSTS = {
                     ],
                   },
                   {
-                    src: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+                    src: "https://media.graphassets.com/output=format:jpg/resize=width:2368,height:2956/WI9lL5ClQoOmgLa3MDxz",
                     type: "image",
                     title: "Outdoors-man-portrait_(cropped).jpg",
                     width: 2368,
                     handle: "WI9lL5ClQoOmgLa3MDxz",
                     height: 2956,
+                    altText: "Outdoors-man-portrait_(cropped).jpg",
                     children: [
                       {
                         text: "",
                       },
                     ],
-                    mimeType: "image/jpeg",
+                    mimeType: "image/jpg",
                   },
                   {
                     type: "code-block",

@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "better-react-carousel": "^1.1.2",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.16.16",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "graphql-tag": "^2.12.6",

@@ -4,6 +4,7 @@ import { useSuspenseQuery } from "@apollo/client";
 import { GET_SINGLE_POST } from "@/services/queries";
 import { Author, PostDetail } from "@/components/Blogs";
 import PostHeader from "@/components/Blogs/PostHeader";
+import TableofContent from "@/components/Blogs/TableofContent";
 import { POSTS } from "@/constants/dummy";
 
 const PostDetails = ({ params }) => {
@@ -11,6 +12,19 @@ const PostDetails = ({ params }) => {
     variables: { slug: params?.slug },
   });
   const { author, title, summary, content, coverImage, date } = data?.post;
+
+  const TableOfContent = [];
+  content?.json?.children.forEach((item) => {
+    if (
+      item.type === "heading-one" ||
+      item.type === "heading-two" ||
+      item.type === "heading-three" ||
+      item.type === "heading-four" ||
+      item.type === "heading-five" ||
+      item.type === "heading-six"
+    )
+      TableOfContent.push(item?.children[0]?.text);
+  });
 
   //test data
 
@@ -38,7 +52,7 @@ const PostDetails = ({ params }) => {
           )}
         </article>
 
-        <Author writer={author} />
+        <Author writer={author} data={TableOfContent} />
       </div>
     </>
   );

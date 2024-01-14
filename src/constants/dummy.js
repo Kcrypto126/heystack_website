@@ -94,6 +94,98 @@ export const ALL_POSTS = {
           },
           date: "2023-12-06",
         },
+        {
+          cursor: "clpsq61fu01ih0cpkgowj4bcn",
+          node: {
+            slug: "artificial-intelligence-ai-stands-as-the-pinnacle-of-human-innovation",
+            summary:
+              "Leaks show that OpenAI will be unveiling major updates to ChatGPT at its developer conference on 6 November. These include custom chatbots.",
+            title:
+              "Artificial Intelligence (AI) stands as the pinnacle of human innovation",
+            coverImage: {
+              url: "https://media.graphassets.com/RVAxFT8nRQu9gI9N9IID",
+            },
+            author: {
+              id: "clpsph1qs018g0cpkc3k39r59",
+              linkedIn: null,
+              name: "Hey-Stack",
+              photo: {
+                url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+              },
+              twitter: null,
+            },
+            date: "2023-12-06",
+          },
+        },
+        {
+          cursor: "clpsq61fu01ih0cpkgowj4bcn",
+          node: {
+            slug: "artificial-intelligence-ai-stands-as-the-pinnacle-of-human-innovation",
+            summary:
+              "Leaks show that OpenAI will be unveiling major updates to ChatGPT at its developer conference on 6 November. These include custom chatbots.",
+            title:
+              "Artificial Intelligence (AI) stands as the pinnacle of human innovation",
+            coverImage: {
+              url: "https://media.graphassets.com/RVAxFT8nRQu9gI9N9IID",
+            },
+            author: {
+              id: "clpsph1qs018g0cpkc3k39r59",
+              linkedIn: null,
+              name: "Hey-Stack",
+              photo: {
+                url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+              },
+              twitter: null,
+            },
+            date: "2023-12-06",
+          },
+        },
+        {
+          cursor: "clpsq61fu01ih0cpkgowj4bcn",
+          node: {
+            slug: "artificial-intelligence-ai-stands-as-the-pinnacle-of-human-innovation",
+            summary:
+              "Leaks show that OpenAI will be unveiling major updates to ChatGPT at its developer conference on 6 November. These include custom chatbots.",
+            title:
+              "Artificial Intelligence (AI) stands as the pinnacle of human innovation",
+            coverImage: {
+              url: "https://media.graphassets.com/RVAxFT8nRQu9gI9N9IID",
+            },
+            author: {
+              id: "clpsph1qs018g0cpkc3k39r59",
+              linkedIn: null,
+              name: "Hey-Stack",
+              photo: {
+                url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+              },
+              twitter: null,
+            },
+            date: "2023-12-06",
+          },
+        },
+        {
+          cursor: "clq5ffr3f02ba0coavdd3wpuo",
+          node: {
+            slug: "unraveling-the-tapestry-of-network-engineering-building-the-backbone-of-connectivity",
+            summary:
+              "In a world where connectivity is king, network engineering stands as the architect behind the scenes, weaving the intricate web",
+            title:
+              " Unraveling the Tapestry of Network Engineering: Building the Backbone of Connectivity",
+            coverImage: {
+              url: "https://media.graphassets.com/wQBRudsQeaMjt44vt4B9",
+            },
+          },
+          author: {
+            id: "clpsph1qs018g0cpkc3k39r59",
+            linkedIn: null,
+            name: "Hey-Stack",
+            photo: {
+              url: "https://media.graphassets.com/WI9lL5ClQoOmgLa3MDxz",
+            },
+            twitter: null,
+          },
+          date: "2023-12-06",
+        },
       ],
     },
   },

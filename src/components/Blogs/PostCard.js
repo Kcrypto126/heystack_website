@@ -3,19 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
-  console.log("featureData", post);
   const { title, summary, slug, author, coverImage, date } = post;
   return (
-    <div className="m-5">
+    <div className="m-5 flex flex-col">
       <img
         src={coverImage?.url}
         alt="data"
         className="w-full h-[200px] rounded-lg object-cover"
       />
-      <h1 className="font-bold py-4 text-xl">
+      <h1 className="font-bold py-4 text-xl hover:text-blue-500">
         <Link href={`/blogs/${slug}`}>{title}</Link>
       </h1>
-      <p className="text-[#676767] py-3">{summary}</p>
+      <p className="text-[#676767] py-3 flex-1">{summary}</p>
 
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center justify-center">

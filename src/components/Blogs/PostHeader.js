@@ -29,7 +29,7 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
         />
       </div>
       <p className="font-bold text-xl lg:mt-24 py-4">{_summary}</p>
-      <motion.div
+      {/* <motion.div
         className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] "
         style={{
           scaleX: scrollYProgress,
@@ -37,7 +37,7 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
       />
       <div className="my-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-md py-2 px-2  text-white text-center font-semibold">
         {_title}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -9,7 +9,7 @@ import Tab from "@/components/Tab";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(6);
+  const [postsPerPage, setPostPerPage] = useState(6);
 
   const { loading, error, data } = useSuspenseQuery(GET_ALL_POST);
   const Posts = data?.postsConnection?.edges;
@@ -28,12 +28,14 @@ const page = () => {
   const previousPage = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
+      setPostPerPage(6);
     }
   };
 
   const nextPage = () => {
     if (currentPage !== Math.ceil(Posts.length / postsPerPage)) {
       setCurrentPage(currentPage + 1);
+      setPostPerPage(6);
     }
   };
 

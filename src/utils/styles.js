@@ -1,80 +1,31 @@
 import Image from "next/image";
-
-// export const renderers = {
-//   h1: ({ children }) => <h1 className="py-2  text-5xl">{children}</h1>,
-//   h2: ({ children }) => <h2 className="py-2  text-4xl">{children}</h2>,
-//   h3: ({ children }) => <h3 className="py-2  text-3xl">{children}</h3>,
-//   h4: ({ children }) => <h4 className="py-2  text-2xl">{children}</h4>,
-//   h5: ({ children }) => <h5 className="py-2  text-xl">{children}</h5>,
-//   h6: ({ children }) => <h6 className="py-2  text-sm">{children}</h6>,
-//   p: ({ children }) => <p className="py-3 text-[15px]">{children}</p>,
-
-//   img: ({ src, altText, height, width, title }) => (
-//     <Image
-//       src={src}
-//       alt={altText}
-//       height={height}
-//       width={width}
-//       className="object-cover w-full rounded-lg"
-//     />
-//   ),
-//   a: ({ children, href, openInNewTab }) => (
-//     <a
-//       href={href}
-//       target={openInNewTab ? "_blank" : "_self"}
-//       style={{ color: "green" }}
-//       rel="noreferrer"
-//     >
-//       {children}
-//     </a>
-//   ),
-//   bold: ({ children }) => <strong>{children}</strong>,
-//   italic: ({ children }) => <i className="">{children}</i>,
-//   underline: ({ children }) => <u>{children}</u>,
-//   code: ({ children }) => (
-//     <code className="bg-slate-700 text-white rounded-lg p-4">{children}</code>
-//   ),
-//   // iframe,
-//   // blockquote,
-//   // code,
-//   // video,
-//   // ul,
-//   // ol,
-//   // li,
-//   // table,
-//   // table_body,
-//   // table_cell,
-//   // table_header_cell,
-//   // table_head,
-//   // table_row,
-
-//   Asset: {
-//     text: () => (
-//       <div>
-//         <p>text plain</p>
-//       </div>
-//     ),
-//   },
-// };
+import { slugifyHeading } from "./slugifyHeading";
 
 const sharedClasses = "dark:text-white py-2";
 const bodyClasses = "text-lg text-gray-700";
+const listClass = "text-md";
+
+export const Heading = ({
+  as: Comp = "h1",
+  size = "4xl",
+  children,
+  className,
+  id, // Pass the ID prop
+}) => {
+  console.log(children.props?.content[0].text);
+  return (
+    <Comp
+      id={slugifyHeading(children.props?.content[0].text)}
+      className={"font-sans font-semibold tracking-tighter text-slate-800"}
+    >
+      {children}
+    </Comp>
+  );
+};
 
 export const renderers = {
-  h1: ({ children }) => (
-    <h1
-      className={`mb-4 text-4xl text-gray-900 md:text-5xl lg:text-6xl ${sharedClasses}`}
-    >
-      {children}
-    </h1>
-  ),
-  h2: ({ children }) => (
-    <h2
-      className={`mb-4 text-3xl text-gray-900 md:text-5xl lg:text-6xl ${sharedClasses}`}
-    >
-      {children}
-    </h2>
-  ),
+  h1: ({ children }) => <Heading children={children}>{children}</Heading>,
+  h2: ({ children }) => <Heading children={children}>{children}</Heading>,
   h3: ({ children }) => (
     <h3 className={`text-3xl ${sharedClasses}`}>{children}</h3>
   ),
@@ -88,7 +39,7 @@ export const renderers = {
     <h6 className={`text-large ${sharedClasses}`}>{children}</h6>
   ),
   p: ({ children }) => (
-    <p className={`my-4 text-lg ${bodyClasses} ${sharedClasses}`}>{children}</p>
+    <p className={`my-4${bodyClasses} ${sharedClasses}`}>{children}</p>
   ),
   a: ({ children, href, openInNewTab, title }) => (
     <a
@@ -102,15 +53,13 @@ export const renderers = {
     </a>
   ),
   ul: ({ children }) => (
-    <ul
-      className={`list-disc list-inside my-4 text-lg ${bodyClasses} ${sharedClasses}`}
-    >
+    <ul className={`list-disc list-inside   ${listClass} ${sharedClasses}`}>
       {children}
     </ul>
   ),
   ol: ({ children }) => (
     <ol
-      className={`list-decimal list-inside my-4 text-lg ${bodyClasses} ${sharedClasses}`}
+      className={`list-decimal list-inside my-4  ${listClass} ${sharedClasses}`}
       style={{ listStyleType: "decimal" }}
     >
       {children}
@@ -118,7 +67,7 @@ export const renderers = {
   ),
   li: ({ children }) => (
     <li
-      className={`my-2 list-disc text-lg ${bodyClasses} ${sharedClasses}`}
+      className={`list-disc  ${listClass} ${sharedClasses}`}
       style={{ listStyleType: "disc" }}
     >
       {children}
@@ -151,44 +100,58 @@ export const renderers = {
       alt={altText}
       height={height}
       width={width}
-      className="object-cover w-full rounded-lg"
+      className="object-cover w-full rounded-lg "
     />
   ),
   blockquote: ({ children }) => (
     <blockquote
-      className="p-4 my-6 border-4  bg-gray-50 rounded-md "
-      style={{
-        borderColor: "gray",
-        borderWidth: 1,
-        backgroundColor: "lightgray",
-      }}
+      className="py-2 px-2 my-6 "
+      style={{ borderLeftColor: "lightgray", borderLeftWidth: 5 }}
     >
-      <p className="text-lg italic font-medium leading-relaxed text-gray-900 dark:text-white">
+      <p className="text-base italic font-medium leading-relaxed text-gray-900 dark:text-white">
         {children}
       </p>
     </blockquote>
   ),
   table: ({ children }) => (
-    <table className="min-w-full flex items-center justify-center flex-col my-10 divide-y divide-gray-200 dark:divide-gray-700">
+    <table className="table-auto border-separate border-spacing-2 my-10  flex items-center flex-col max-w-full justify-center">
       {children}
     </table>
   ),
   table_head: ({ children }) => (
     <thead
-      className="divide-y divide-gray-200 dark:divide-gray-70 "
+      className="border border-slate-600"
       style={{ background: "lightgray" }}
     >
       {children}
     </thead>
   ),
   table_header_cell: ({ children }) => (
-    <th className="px-6 py-4">{children}</th>
+    <th className="px-4 py-4">{children}</th>
   ),
-  table_body: ({ children }) => <tbody>{children}</tbody>,
-  table_row: ({ children }) => <tr>{children}</tr>,
+  table_body: ({ children }) => <tbody className="">{children}</tbody>,
+  table_row: ({ children }) => (
+    <tr className="border border-slate-800">{children}</tr>
+  ),
   table_cell: ({ children }) => (
-    <td className="px-6 py-4  text-sm font-medium text-gray-800 dark:text-gray-200">
+    <td className="px-6 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 border border-slate-800">
       {children}
     </td>
   ),
+
+  iframe: ({ children, url, title }) => (
+    <iframe
+      className="aspect-video rounded-md object-cover"
+      src={`https://www.youtube.com/embed/${getLink(url)}`}
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      title={title}
+    ></iframe>
+  ),
 };
+
+function getLink(url) {
+  const embed = url.split("/");
+  return embed[3];
+}

@@ -31,35 +31,27 @@ export const Heading = ({
 
 export const renderers = {
   h1: ({ children }) => (
-    <Heading as={"h1"} size={"4xl"} children={children}>
+    <Heading as={"h1"} size={"4xl"}>
       {children}
     </Heading>
   ),
   h2: ({ children }) => (
-    <Heading as="h2" size={"3xl"} children={children}>
+    <Heading as="h2" size={"3xl"}>
       {children}
     </Heading>
   ),
   h3: ({ children }) => (
-    <Heading as="h3" size={"2xl"} children={children}>
+    <Heading as="h3" size={"2xl"}>
       {children}
     </Heading>
   ),
   h4: ({ children }) => (
-    <Heading as="h4" size={"xl"} children={children}>
+    <Heading as="h4" size={"xl"}>
       {children}
     </Heading>
   ),
-  h5: ({ children }) => (
-    <Heading as="h5" children={children}>
-      {children}
-    </Heading>
-  ),
-  h6: ({ children }) => (
-    <Heading as="h6" children={children}>
-      {children}
-    </Heading>
-  ),
+  h5: ({ children }) => <Heading as="h5">{children}</Heading>,
+  h6: ({ children }) => <Heading as="h6">{children}</Heading>,
   p: ({ children }) => <p>{children}</p>,
   a: ({ children, href, openInNewTab, title }) => (
     <a

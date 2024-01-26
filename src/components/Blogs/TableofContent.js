@@ -105,7 +105,9 @@ const TableofContent = ({ data }) => {
           <Heading as="h3">Table of Content</Heading>
           <ol className="pl-4 mt-4" ref={headingsList} role="list">
             {data.map((hash) => {
-              return <TocNavElement hash={hash} activeId={activeId} />;
+              return (
+                <TocNavElement hash={hash} activeId={activeId} key={hash} />
+              );
             })}
           </ol>
         </nav>

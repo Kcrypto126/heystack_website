@@ -8,7 +8,7 @@ import { useBlogs } from "@/context/BlogContext";
 import NewsLetter from "@/components/Blogs/NewsLetter";
 import BookDemo from "@/components/Blogs/BookDemo";
 
-const page = () => {
+const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
 
@@ -67,4 +67,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

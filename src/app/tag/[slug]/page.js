@@ -9,7 +9,7 @@ import Tab from "@/components/Tab";
 import { useBlogs } from "@/context/BlogContext";
 import { GET_POST_FOR_TAG, GET_TAGS } from "@/services/queries";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
 
@@ -70,4 +70,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

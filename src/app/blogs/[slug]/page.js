@@ -6,6 +6,7 @@ import { Author, PostDetail } from "@/components/Blogs";
 import PostHeader from "@/components/Blogs/PostHeader";
 import TableofContent from "@/components/Blogs/TableofContent";
 import { POSTS } from "@/constants/dummy";
+import Recommendations from "@/components/Blogs/Recommendations";
 
 const PostDetails = ({ params }) => {
   const { loading, error, data } = useSuspenseQuery(GET_SINGLE_POST, {
@@ -14,7 +15,7 @@ const PostDetails = ({ params }) => {
   const { author, title, summary, content, coverImage, date } = data?.post;
 
   const TableOfContent = [];
-  content?.json?.children.forEach((item) => {
+  content?.json?.children?.forEach((item) => {
     if (
       item.type === "heading-one" ||
       item.type === "heading-two" ||
@@ -52,8 +53,13 @@ const PostDetails = ({ params }) => {
           )}
         </article>
 
-        <Author writer={author} data={TableOfContent} />
+        <div>
+          <Author writer={author} />
+          <TableofContent data={TableOfContent} />
+        </div>
       </div>
+      <hr />
+      <Recommendations />
     </>
   );
 };

@@ -1,19 +1,23 @@
 "use client";
 import { FeaturedPost, PostCard } from "@/components/Blogs";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Paginate from "@/utils/paginate";
+import { useSuspenseQuery } from "@apollo/client";
+
 import { ALL_POSTS, posts } from "@/constants/dummy";
 import Tab from "@/components/Tab";
 import { useBlogs } from "@/context/BlogContext";
-import NewsLetter from "@/components/Blogs/NewsLetter";
-import BookDemo from "@/components/Blogs/BookDemo";
+import { GET_POST_FOR_TAG, GET_TAGS } from "@/services/queries";
 
-const page = () => {
+const page = ({ params }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
 
-  const { loading, error, Posts } = useBlogs();
+  const { loading, error, data } = useSuspenseQuery(GET_POST_FOR_TAG, {
+    variables: { slug: params?.slug },
+  });
 
+  const Posts = data?.postsConnection?.edges;
   if (Posts.length == 0) return;
 
   // test - data;
@@ -43,7 +47,6 @@ const page = () => {
 
   return (
     <div>
-      <FeaturedPost post={Posts[0]} />
       <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
         {!loading && !error ? (
           currentPosts.map(({ cursor, node }) => {
@@ -61,8 +64,8 @@ const page = () => {
         previousPage={previousPage}
         nextPage={nextPage}
       />
-      <NewsLetter />
-      <BookDemo />
+
+      <Tab />
     </div>
   );
 };

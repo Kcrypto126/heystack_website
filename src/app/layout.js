@@ -4,6 +4,7 @@ import "./globals.css";
 import { ApolloWrapper } from "@/utils/apollo-wrapper";
 import NavBar from "@/components/NavBar";
 import MobileNavbar from "@/components/MobileNavBar";
+import { BlogsProvider } from "@/context/BlogContext";
 
 const inter = Inter({ subsets: ["latin"] });
 

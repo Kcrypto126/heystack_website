@@ -16,7 +16,7 @@ const TocNavElement = ({ hash, children, level, activeId }) => {
         "text-blue-700": id === activeId,
       })}
     >
-      <a className="block text-slate-700" href={`#${id}`}>
+      <a className="block text-slate-700 hover:text-blue-400" href={`#${id}`}>
         {hash}
       </a>
     </li>
@@ -99,10 +99,10 @@ const TableofContent = ({ data }) => {
   }, [headings]);
 
   return (
-    <div className="flex flex-col space-y-1">
+    <div className="flex prose flex-col space-y-1 sticky top-12 px-4 py-4 rounded-md shadow-lg w-[28rem] h-fit">
       <aside>
         <nav>
-          <Heading>Table of Content</Heading>
+          <Heading as="h3">Table of Content</Heading>
           <ol className="pl-4 mt-4" ref={headingsList} role="list">
             {data.map((hash) => {
               return <TocNavElement hash={hash} activeId={activeId} />;

@@ -28,7 +28,7 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
           className="object-cover rounded-xl lg:-mb-20 h-[30rem] w-full"
         />
       </div>
-      <p className="font-bold text-xl lg:mt-24 py-4">{_summary}</p>
+      <h1 className=" font-bold text-xl prose lg:mt-24 py-8">{_summary}</h1>
       {/* <motion.div
         className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] "
         style={{

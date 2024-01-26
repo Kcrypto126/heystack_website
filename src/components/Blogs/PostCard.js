@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
-  const { title, summary, slug, author, coverImage, date } = post;
+  const { title, summary, slug, author, coverImage, date, categories } = post;
+
+  const category = categories[0];
+
   return (
     <div className="m-5 flex flex-col">
       <img
@@ -21,7 +24,7 @@ const PostCard = ({ post }) => {
           <img
             src={author?.photo?.url}
             alt="author"
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover cursor-pointer"
           />
           <p className="py-1 px-2 font-semibold">{author?.name}</p>
         </div>
@@ -33,6 +36,12 @@ const PostCard = ({ post }) => {
           })}
         </p>
       </div>
+      <Link
+        href={`/tag/${category.slug}`}
+        className="my-4 px-4 py-1 rounded-full bg-slate-100 text-xs w-fit"
+      >
+        {category.name}
+      </Link>
     </div>
   );
 };

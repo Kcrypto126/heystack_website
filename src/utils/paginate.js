@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 const Paginate = ({
@@ -18,24 +19,24 @@ const Paginate = ({
       <ul className="flex flex-row items-center justify-center gap-3">
         <li
           onClick={previousPage}
-          className="block cursor-pointer shadow-md border rounded-md hover:bg-[#F4DBFF] text-[#660091]"
+          className="cursor-pointer   rounded-md hover:bg-[#F4DBFF] text-[#660091]"
         >
-          Prev
+          {"<"}
         </li>
         {pageNumbers.map((number) => (
           <li
             key={number}
             onClick={() => paginate(number)}
-            className={
-              "cursor-pointer " +
-              (number === currentPage ? "cursor-pointer font-bold" : "")
-            }
+            className={clsx(
+              "cursor-pointer hover:bg-pageHover text-page",
+              number === currentPage && "font-bold bg-pageHover "
+            )}
           >
             {number}
           </li>
         ))}
         <li onClick={nextPage} className="cursor-pointer">
-          Next
+          {">"}
         </li>
       </ul>
     </div>

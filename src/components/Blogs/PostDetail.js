@@ -8,7 +8,7 @@ const PostDetail = ({ content }) => {
     : null;
 
   return (
-    <article>
+    <article className="prose  prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-slate  lg:prose-lg prose-img:w-full prose-img:rounded-xl">
       <RichText content={contentChildrenDeepCopy} renderers={renderers} />
     </article>
   );

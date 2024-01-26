@@ -42,7 +42,7 @@ const FeaturedPost = ({ post }) => {
   return (
     <div className="bg-[#EAF0FF] w-full my-10 py-10">
       <div className="max-w-5xl mx-auto">
-        <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
+        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
           Hey-Stack Blogs
         </h1>
         <p className="py-2">

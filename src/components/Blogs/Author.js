@@ -3,10 +3,10 @@ import React from "react";
 import Link from "next/link";
 import TableofContent from "./TableofContent";
 
-const Author = ({ writer, data }) => {
+const Author = ({ writer }) => {
   const { name, id, photo } = writer;
   return (
-    <div className="fixed right-10">
+    <div className="right-10">
       <div className=" shadow-lg rounded-lg p-4 w-[28rem] h-fit  col-span-1 ">
         <div className="flex flex-row items-center  ">
           <img
@@ -16,7 +16,7 @@ const Author = ({ writer, data }) => {
           />
           <p className="font-semibold text-lg ml-2">{name}</p>
         </div>
-        <p className=" text-[#676767] py-2 px-2">
+        <p className=" text-[#676767] py-2 px-2 prose">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
           ut deleniti fuga sit ad nemo?
         </p>
@@ -25,7 +25,6 @@ const Author = ({ writer, data }) => {
           <Link href={"www.google.com"}>{linkedIn_logo}</Link>
         </div>
       </div>
-      <TableofContent data={data} />
     </div>
   );
 };

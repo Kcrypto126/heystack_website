@@ -12,6 +12,8 @@ module.exports = {
         ...colors,
         primary: "#4150821C",
         secondary: "#415082",
+        page: "#660091",
+        pageHover: "#F4DBFF",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -1,16 +1,36 @@
 import { NextResponse } from "next/server";
 
-// To handle a GET request to /api
 export async function GET(request) {
-  // Do whatever you want
-  const data = await fetch("https://fakestoreapi.com/products/1").then((res) =>
-    res.json()
-  );
   return NextResponse.json(data, { status: 200 });
 }
 
-// To handle a POST request to /api
-export async function POST(request) {
-  // Do whatever you want
-  return NextResponse.json({ message: "Hello World" }, { status: 200 });
+export async function POST(req) {
+  const payload = await req.json();
+  const { data } = payload;
+  const { title, slug } = data;
+
+  const EmailMessage = {
+    name: "Hey-Stack",
+    email: "dummymail@heystack.com",
+    subject: "New Blog published",
+    message: `We have published a new blog on ${title} kindly check this at https://hey-stack.netlify.app/blogs/${slug}`,
+  };
+
+  try {
+    const message = await fetch(
+      "https://us.locogram.com/Contactus/email.json",
+      {
+        method: "POST",
+
+        body: JSON.stringify(EmailMessage),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    ).then((response) => response.json());
+    return NextResponse.json(message, { status: 200 });
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json(err);
+  }
 }

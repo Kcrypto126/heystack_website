@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "./Badge";
 
 const PostCard = ({ post }) => {
   const { title, summary, slug, author, coverImage, date, categories } = post;
@@ -8,11 +9,11 @@ const PostCard = ({ post }) => {
   const category = categories[0];
 
   return (
-    <div className="m-5 flex flex-col">
+    <div className="my-5 flex flex-col">
       <img
         src={coverImage?.url}
         alt="data"
-        className="w-full h-[200px] rounded-lg object-cover"
+        className="w-full h-[200px] rounded-lg bg-center object-fill cursor-pointer"
       />
       <h1 className="font-bold py-4 text-xl hover:text-blue-500">
         <Link href={`/blogs/${slug}`}>{title}</Link>
@@ -36,12 +37,7 @@ const PostCard = ({ post }) => {
           })}
         </p>
       </div>
-      <Link
-        href={`/tag/${category.slug}`}
-        className="my-4 px-4 py-1 rounded-full bg-slate-100 text-xs w-fit"
-      >
-        {category.name}
-      </Link>
+      <Badge href={category.slug} name={category.name} />
     </div>
   );
 };

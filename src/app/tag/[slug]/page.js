@@ -1,6 +1,6 @@
 "use client";
 import { FeaturedPost, PostCard } from "@/components/Blogs";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Paginate from "@/utils/paginate";
 import { useSuspenseQuery } from "@apollo/client";
 
@@ -8,10 +8,13 @@ import { ALL_POSTS, posts } from "@/constants/dummy";
 import Tab from "@/components/Tab";
 import { useBlogs } from "@/context/BlogContext";
 import { GET_POST_FOR_TAG, GET_TAGS } from "@/services/queries";
+import { Badge } from "@/components/Blogs/Badge";
 
 const Page = ({ params }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
+
+  const { allTags } = useBlogs();
 
   const { loading, error, data } = useSuspenseQuery(GET_POST_FOR_TAG, {
     variables: { slug: params?.slug },
@@ -34,19 +37,23 @@ const Page = ({ params }) => {
   const previousPage = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
-      setPostPerPage(6);
     }
   };
 
   const nextPage = () => {
     if (currentPage !== Math.ceil(Posts.length / postsPerPage)) {
       setCurrentPage(currentPage + 1);
-      setPostPerPage(6);
     }
   };
 
   return (
     <div>
+      <div className="max-w-5xl flex mx-auto gap-3 flex-wrap">
+        {allTags.map((item) => {
+          return <Badge href={item.slug} name={item.name} />;
+        })}
+      </div>
+
       <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
         {!loading && !error ? (
           currentPosts.map(({ cursor, node }) => {

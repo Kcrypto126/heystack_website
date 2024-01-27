@@ -4,19 +4,24 @@ import { slugifyHeading } from "@/utils/slugifyHeading";
 import React, { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import { Heading } from "@/utils/styles";
+import { Form } from "./NewsLetter";
 
 const TocNavElement = ({ hash, children, level, activeId }) => {
   const id = slugifyHeading(hash);
   return (
     <li
+      // className={clsx("list-disc transition-colors", {
+      //   "text-slate-300": id !== activeId,
+      //   "text-blue-700 ": id === activeId,
+      // })}
       className={clsx("list-disc transition-colors", {
-        "pl-2": level === 1,
-        "pl-4": level === 2,
-        "text-slate-300": id !== activeId,
-        "text-blue-700": id === activeId,
+        "bg-blue-50": id === activeId,
       })}
     >
-      <a className="block text-slate-700 hover:text-blue-400" href={`#${id}`}>
+      <a
+        className="block text-slate-700 hover:text-blue-400 no-underline"
+        href={`#${id}`}
+      >
         {hash}
       </a>
     </li>
@@ -99,19 +104,24 @@ const TableofContent = ({ data }) => {
   }, [headings]);
 
   return (
-    <div className="flex prose flex-col space-y-1 sticky top-12 px-4 py-4 rounded-md shadow-lg w-[28rem] h-fit">
-      <aside>
-        <nav>
-          <Heading as="h3">Table of Content</Heading>
-          <ol className="pl-4 mt-4" ref={headingsList} role="list">
-            {data.map((hash) => {
-              return (
-                <TocNavElement hash={hash} activeId={activeId} key={hash} />
-              );
-            })}
-          </ol>
-        </nav>
-      </aside>
+    <div className="sticky top-12">
+      <div className="flex prose flex-col space-y-1  px-4 py-4 rounded-md shadow-lg w-[28rem] h-fit">
+        <aside>
+          <nav>
+            <Heading as="h3">Table of Content</Heading>
+            <ol className="pl-4 mt-4" ref={headingsList} role="list">
+              {data.map((hash) => {
+                return (
+                  <TocNavElement hash={hash} activeId={activeId} key={hash} />
+                );
+              })}
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <div className="my-4">
+        <Form />
+      </div>
     </div>
   );
 };

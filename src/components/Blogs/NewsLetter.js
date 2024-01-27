@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-function Form() {
+export function Form() {
   const [email, setEmail] = useState();
   const [disabled, setDisabled] = useState(false);
   const [showSuccessMessage, setSuccssMessage] = useState("");

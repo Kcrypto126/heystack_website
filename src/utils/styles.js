@@ -14,18 +14,7 @@ export const Heading = ({
   id,
 }) => {
   return (
-    <Comp
-      id={slugifyHeading(children.props?.content[0].text)}
-      // className={clsx(
-      //   "py-1 font-bold",
-      //   size === "4xl" && "text-4xl",
-      //   size === "3xl" && "text-3xl",
-      //   size === "2xl" && "text-2xl",
-      //   size === "xl" && "text-xl"
-      // )}
-    >
-      {children}
-    </Comp>
+    <Comp id={slugifyHeading(children.props?.content[0].text)}>{children}</Comp>
   );
 };
 

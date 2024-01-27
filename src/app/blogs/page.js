@@ -30,21 +30,19 @@ const Page = () => {
   const previousPage = () => {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
-      setPostPerPage(6);
     }
   };
 
   const nextPage = () => {
     if (currentPage !== Math.ceil(Posts.length / postsPerPage)) {
       setCurrentPage(currentPage + 1);
-      setPostPerPage(6);
     }
   };
 
   return (
     <div>
       <FeaturedPost post={Posts[0]} />
-      <div className="grid grid-cols-3 gap-5 max-w-6xl mx-auto">
+      <div className="grid grid-cols-3 max-w-6xl mx-auto gap-8">
         {!loading && !error ? (
           currentPosts.map(({ cursor, node }) => {
             return <PostCard key={cursor} post={node} />;

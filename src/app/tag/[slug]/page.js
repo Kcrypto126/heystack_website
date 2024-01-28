@@ -50,7 +50,7 @@ const Page = ({ params }) => {
     <div>
       <div className="max-w-5xl flex mx-auto gap-3 flex-wrap">
         {allTags.map((item) => {
-          return <Badge href={item.slug} name={item.name} />;
+          return <Badge href={item.slug} name={item.name} key={item.name} />;
         })}
       </div>
 

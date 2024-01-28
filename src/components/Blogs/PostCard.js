@@ -13,7 +13,7 @@ const PostCard = ({ post }) => {
       <img
         src={coverImage?.url}
         alt="data"
-        className="w-full h-[200px] rounded-lg bg-center object-fill cursor-pointer"
+        className="max-w-full lg:h-[200px] h-auto rounded-lg bg-center object-fill cursor-pointer"
       />
       <h1 className="font-bold py-4 text-xl hover:text-blue-500">
         <Link href={`/blogs/${slug}`}>{title}</Link>

@@ -66,30 +66,28 @@ export const renderers = {
     <img src={src} alt={altText} />
   ),
   blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-  table: ({ children }) => <table className="">{children}</table>,
+  table: ({ children }) => (
+    <div className="relative overflow-x-auto">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+        {children}
+      </table>
+    </div>
+  ),
   table_head: ({ children }) => (
-    <thead className="   border ">{children}</thead>
+    <thead className=" text-gray-700 uppercase bg-gray-100">{children}</thead>
   ),
   table_header_cell: ({ children }) => (
     <th
       scope="col"
-      className="px-6 py-3 border text-center bg-slate-400"
-      style={{ background: "lightgray" }}
+      className="px-6 py-3 rounded-s-lg"
+      // className="px-6 py-3 border text-center bg-slate-400"
     >
       {children}
     </th>
   ),
-  table_body: ({ children }) => <tbody className="">{children}</tbody>,
-  table_row: ({ children }) => (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-      {children}
-    </tr>
-  ),
-  table_cell: ({ children }) => (
-    <td className="px-6 py-4 font-medium text-gray-800 dark:text-gray-200 border border-slate-800 text-center">
-      {children}
-    </td>
-  ),
+  table_body: ({ children }) => <tbody>{children}</tbody>,
+  table_row: ({ children }) => <tr>{children}</tr>,
+  table_cell: ({ children }) => <td className="mx-2">{children}</td>,
 
   iframe: ({ children, url, title }) => (
     <div className="flex items-center justify-center py-4">

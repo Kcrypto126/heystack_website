@@ -36,7 +36,7 @@ const PostData = ({ params }) => {
 
   return (
     <>
-      <div className="grid grid-cols-3 max-w-7xl mx-auto my-20 gap-4">
+      <div className="grid lg:grid-cols-3 grid-cols-1 max-w-7xl lg:mx-auto md:mx-8 mx-5 my-20 gap-4">
         <article className="max-w-4xl col-span-2">
           {!loading && !error ? (
             <div>
@@ -54,7 +54,7 @@ const PostData = ({ params }) => {
           )}
         </article>
 
-        <div>
+        <div className="lg:block hidden">
           <Author writer={author} />
           <TableofContent data={TableOfContent} />
         </div>

@@ -5,11 +5,11 @@ const FetauredPostDetails = ({ post }) => {
   const { author, title, slug, date, coverImage, summary } = post?.node;
 
   return (
-    <div className="grid grid-cols-2 gap-8  items-center justify-center">
+    <div className="grid lg:grid-cols-2 lg:gap-8 gap-4 grid-cols-1 items-center justify-center">
       <img
         src={coverImage?.url}
         alt="featuredImage"
-        className="w-full h-72 rounded-lg object-cover "
+        className="max-w-full lg:h-72 h-auto rounded-lg object-cover "
       />
       <div>
         <h1 className="font-bold py-4 text-xl">
@@ -40,8 +40,8 @@ const FetauredPostDetails = ({ post }) => {
 
 const FeaturedPost = ({ post }) => {
   return (
-    <div className="bg-[#EAF0FF] w-full my-10 py-10">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-[#EAF0FF] w-full my-10 py-10 ">
+      <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
           Hey-Stack Blogs
         </h1>

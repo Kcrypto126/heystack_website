@@ -94,9 +94,8 @@ export const renderers = {
       <iframe
         className=" rounded-md  h-full object-cover w-52"
         src={`https://www.youtube.com/embed/${getLink(url)}`}
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen={true}
+        allowFullScreen={true}
         title={title}
         style={{ width: "500px", height: "300px" }}
       ></iframe>

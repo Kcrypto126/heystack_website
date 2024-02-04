@@ -8,7 +8,7 @@ function Work() {
       <Container>
         <div className="">
           <div className="px-1">
-            <p className="text-center md:text-[2.5rem] text-[1.5rem] px-3 work-heading">
+            <p className="px-3 text-3xl text-center sm:text-4xl work-heading">
               How brands leverage Heystack Insights
             </p>
           </div>
@@ -34,6 +34,7 @@ function Work() {
                     height="100"
                     alt="btn"
                     className="cursor-pointer"
+                    draggable={false}
                   />
                 </div>
                 <div className="md:basis-[60%] md:mt-0 mt-10 flex justify-center items-center relative">

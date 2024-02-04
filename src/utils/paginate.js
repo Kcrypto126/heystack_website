@@ -14,30 +14,55 @@ const Paginate = ({
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
+
+  const displayPageNumbers = () => {
+    const adjacentPageCount = 2;
+    const ellipsis = " ... ";
+
+    let pages = [];
+
+    for (let i = 0; i < pageNumbers.length; i++) {
+      if (
+        i < adjacentPageCount ||
+        i >= pageNumbers.length - adjacentPageCount ||
+        Math.abs(currentPage - pageNumbers[i]) <= adjacentPageCount
+      ) {
+        pages.push(
+          <li
+            key={pageNumbers[i]}
+            onClick={() => paginate(pageNumbers[i])}
+            className={clsx(
+              "cursor-pointer hover:bg-pageHover text-page bg-page",
+              pageNumbers[i] === currentPage && "font-bold bg-pageHover "
+            )}
+          >
+            {pageNumbers[i]}
+          </li>
+        );
+      } else if (
+        pages[pages.length - 1] !== ellipsis &&
+        i === adjacentPageCount
+      ) {
+        pages.push(<li key={i}>{ellipsis}</li>);
+      }
+    }
+
+    return pages;
+  };
+
   return (
-    <div className="">
+    <div>
       <ul className="flex flex-row items-center justify-center gap-3">
-        <li
+        {/* <li
           onClick={previousPage}
           className="cursor-pointer   rounded-md hover:bg-[#F4DBFF] text-[#660091]"
         >
           {"<"}
-        </li>
-        {pageNumbers.map((number) => (
-          <li
-            key={number}
-            onClick={() => paginate(number)}
-            className={clsx(
-              "cursor-pointer hover:bg-pageHover text-page",
-              number === currentPage && "font-bold bg-pageHover "
-            )}
-          >
-            {number}
-          </li>
-        ))}
-        <li onClick={nextPage} className="cursor-pointer">
+        </li> */}
+        {displayPageNumbers()}
+        {/* <li onClick={nextPage} className="cursor-pointer">
           {">"}
-        </li>
+        </li> */}
       </ul>
     </div>
   );

@@ -67,8 +67,8 @@ export const renderers = {
   ),
   blockquote: ({ children }) => <blockquote>{children}</blockquote>,
   table: ({ children }) => (
-    <div className="relative overflow-x-auto">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+    <div className="">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 relative overflow-x-auto">
         {children}
       </table>
     </div>

@@ -5,6 +5,7 @@ import { ApolloWrapper } from "@/utils/apollo-wrapper";
 import NavBar from "@/components/NavBar";
 import MobileNavbar from "@/components/MobileNavBar";
 import { BlogsProvider } from "@/context/BlogContext";
+import Top from "@/components/Top";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -22,11 +23,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <ApolloWrapper>
-          <div className="sticky inset-0 lg:hidden block  w-full z-50">
+          <div className="sticky inset-0 z-50 block w-full lg:hidden">
             <MobileNavbar />
           </div>
           {children}
         </ApolloWrapper>
+        <Top />
       </body>
     </html>
   );

@@ -14,8 +14,10 @@
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@rive-app/react-canvas": "^4.7.1",
     "better-react-carousel": "^1.1.2",
     "clsx": "^2.1.0",
+    "framer": "^2.4.1",
     "framer-motion": "^10.16.16",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
@@ -23,7 +25,9 @@
     "next": "13.5.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-paginate": "^8.2.0"
+    "react-paginate": "^8.2.0",
+    "react-icons": "^5.0.1",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

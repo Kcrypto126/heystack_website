@@ -85,6 +85,7 @@ export const GET_POST_FOR_TAG = gql`
           createdAt
           slug
           title
+          summary
           coverImage {
             url
           }

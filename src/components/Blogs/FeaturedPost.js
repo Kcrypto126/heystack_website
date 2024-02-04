@@ -6,23 +6,27 @@ const FetauredPostDetails = ({ post }) => {
 
   return (
     <div className="grid lg:grid-cols-2 lg:gap-8 gap-4 grid-cols-1 items-center justify-center">
-      <img
-        src={coverImage?.url}
-        alt="featuredImage"
-        className="max-w-full lg:h-72 h-auto rounded-lg object-cover "
-      />
+      <div class="h-min overflow-hidden rounded-md">
+        <img
+          src={coverImage?.url}
+          alt="featuredImage"
+          className="hover:scale-105 transition-all duration-500 max-w-full lg:h-80 h-auto rounded-lg object-cover cursor-pointer "
+        />
+      </div>
       <div>
-        <h1 className="font-bold py-4 text-xl">
+        <h1 className="font-semibold py-4 text-3xl hover:text-page">
           <Link href={`/blogs/${slug}`}>{title}</Link>
         </h1>
         <p className="text-[#676767] py-2">{summary}</p>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center justify-center">
-            <img
-              src={author?.photo?.url}
-              alt="author"
-              className="w-10 h-10 rounded-full object-cover"
-            />
+            <Link href={`/blogs/${slug}`}>
+              <img
+                src={author?.photo?.url}
+                alt="author"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+            </Link>
             <p className="py-1 px-2 font-semibold">{author?.name}</p>
           </div>
           <p className="text-sm">

@@ -11,7 +11,7 @@ function Brands() {
     <div className="brands-section">
       <Container>
         <div className="w-full mx-auto mt-8">
-          <p className="md:text-3xl md:text-[2.5rem] text-2xl font-bold text-center">
+          <p className="text-3xl font-bold text-center sm:text-4xl">
             Brands that <span className="text-secondary">trust us</span>
           </p>
           <div className="md:mt-8">

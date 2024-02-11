@@ -4,11 +4,11 @@ import Container from "./Container";
 
 function Testimonial() {
   return (
-    <div className="testimonial">
+    <div className="testimonial bg-gradient-to-t from-[#EAF0FF]">
       <Container>
         <div>
           <div className="text-center">
-            <p className="text-center md:text-[2.5rem] text-2xl px-3 heading">
+            <p className="px-3 text-3xl text-center sm:text-4xl heading">
               Testimonials
             </p>
             <p className="mt-1 text-base text-gray-600 md:text-2xl">

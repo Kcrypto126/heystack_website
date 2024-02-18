@@ -25,7 +25,7 @@ function Herosection() {
             width="1400"
             height="368"
             src="https://rive.app/community/7548-15148-looping-animation-02/embed"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </Container>

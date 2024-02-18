@@ -6,8 +6,8 @@ import TableofContent from "./TableofContent";
 const Author = ({ writer }) => {
   const { name, id, photo } = writer;
   return (
-    <div className="right-10">
-      <div className=" shadow-lg rounded-lg p-4 w-[28rem] h-fit  col-span-1 ">
+    <div className="right-10 lg:mt-20">
+      <div className=" shadow-lg rounded-lg p-4 max-w-md h-fit  col-span-1 ">
         <div className="flex flex-row items-center  ">
           <img
             src={photo?.url}
@@ -16,7 +16,7 @@ const Author = ({ writer }) => {
           />
           <p className="font-semibold text-lg ml-2">{name}</p>
         </div>
-        <p className=" text-[#676767] py-2 px-2 prose">
+        <p className=" text-[#676767] py-3 px-2 text-sm">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
           ut deleniti fuga sit ad nemo?
         </p>

@@ -54,7 +54,7 @@ const PostData = ({ params }) => {
           )}
         </article>
 
-        <div className="lg:block hidden space-y-8">
+        <div className="lg:flex flex-col hidden items-center justify-start">
           <Author writer={author} />
           <TableofContent data={TableOfContent} />
         </div>

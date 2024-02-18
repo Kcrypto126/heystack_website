@@ -104,8 +104,8 @@ const TableofContent = ({ data }) => {
   }, [headings]);
 
   return (
-    <div className="sticky top-12">
-      <div className="flex prose flex-col space-y-1  px-4 py-4 rounded-md shadow-lg w-[28rem] h-fit">
+    <div className="sticky top-12 mt-[80vh] z-50">
+      <div className="flex prose flex-col space-y-1  px-4 py-4 rounded-md shadow-lg w-[24rem] h-fit bg-white">
         <aside>
           <nav>
             <Heading as="h3">Table of Content</Heading>

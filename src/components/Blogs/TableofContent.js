@@ -105,7 +105,7 @@ const TableofContent = ({ data }) => {
 
   return (
     <div className="sticky top-12 mt-[80vh] z-50">
-      <div className="flex prose flex-col space-y-1  px-4 py-4 rounded-md shadow-lg w-[24rem] h-fit bg-white">
+      <div className="flex prose flex-col space-y-1  px-4 py-4 rounded-md shadow-lg w-[28rem] h-fit bg-white">
         <aside>
           <nav>
             <Heading as="h3">Table of Content</Heading>
@@ -120,6 +120,20 @@ const TableofContent = ({ data }) => {
         </aside>
       </div>
       <div className="my-4">
+        <NewsLetterForm />
+      </div>
+    </div>
+  );
+};
+
+export const NewsLetterForm = () => {
+  return (
+    <div className="shadow-lg pt-4  px-4 w-[28rem] rounded-md space-y-2">
+      <h3 className="text-lg font-bold ">Hey-Stack Newsletter</h3>
+      <p className="text-sm ">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dicta?
+      </p>
+      <div className="pt-2 -pb-2">
         <Form />
       </div>
     </div>

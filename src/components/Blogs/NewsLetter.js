@@ -50,7 +50,7 @@ export function Form() {
               Email Address
             </label>
           </div>
-          <div className="w-full px-1 mb-8 mx-auto text-xs ">
+          <div className="w-full px-1 mb-8 mx-auto text-[11px] pb-2">
             {error && (
               <p className="text-red-600 text-xs font-semibold pt-1">{error}</p>
             )}

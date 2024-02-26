@@ -28,18 +28,21 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
           className="object-cover rounded-xl lg:-mb-20 lg:h-[30rem]  h-auto w-full"
         />
       </div>
+      <div className="sticky top-0 bg-white h-4 z-50">
+        <motion.div
+          className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-full  w-full lg:block hidden mt-24 top-1 relative "
+          style={{
+            scaleX: scrollYProgress,
+            transformOrigin: 0,
+          }}
+          direction="left"
+        />
+      </div>
 
-      <motion.div
-        className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] sticky top-1 rounded-full  w-full lg:block hidden lg:mt-24 "
-        style={{
-          scaleX: scrollYProgress,
-          transformOrigin: 0,
-        }}
-        direction="left"
-      />
-      <div className="my-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-md py-2 px-2  text-white text-center font-semibold sticky top-4 max-w-full lg:block hidden">
+      <div className="z-50 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-md py-2 px-2  text-white text-center font-semibold sticky top-4 max-w-full lg:block hidden">
         {_title}
       </div>
+
       <h1 className="font-bold lg:text-xl prose  md:py-8 py-4 max-w-3xl">
         {_summary}
       </h1>

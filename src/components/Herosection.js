@@ -19,7 +19,33 @@ function Herosection() {
         />
       </div>
       <Container>
-        <div className="relative z-10">
+        <div className="relative z-10 my-16">
+          <div className="flex justify-between">
+            <div className="text-center max-w-[18rem]">
+              <h1 className="text-[#415082] font-semibold text-xl mb-4">
+                Customer segment
+              </h1>
+              <p className="text-gray-700">
+                Connect your sales and marketing apps and products data
+              </p>
+            </div>
+            <div className="text-center max-w-[18rem] mt-8">
+              <h1 className="text-[#415082] font-semibold text-xl mb-4">
+                Customer segment
+              </h1>
+              <p className="text-gray-700">
+                Connect your sales and marketing apps and products data
+              </p>
+            </div>
+            <div className="text-center max-w-[18rem]">
+              <h1 className="text-[#415082] font-semibold text-xl mb-4">
+                Customer segment
+              </h1>
+              <p className="text-gray-700">
+                Connect your sales and marketing apps and products data
+              </p>
+            </div>
+          </div>
           <iframe
             className="w-full mx-auto"
             width="1400"

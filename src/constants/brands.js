@@ -1,45 +1,81 @@
 const brands = [
   {
-    src: "/brand.png",
+    src: "/adams.png",
   },
   {
-    src: "/brand.png",
+    src: "/aqueon.png",
   },
   {
-    src: "/brand.png",
+    src: "/ariat.png",
   },
   {
-    src: "/brand.png",
+    src: "/bare.png",
   },
   {
-    src: "/brand.png",
+    src: "/c and s made in usa.png",
   },
   {
-    src: "/brand.png",
+    src: "/cadet.png",
   },
   {
-    src: "/brand.png",
+    src: "/catit.png",
   },
   {
-    src: "/brand.png",
+    src: "/cenetral garden and pet.png",
   },
   {
-    src: "/brand.png",
+    src: "/charlotte russe.png",
   },
   {
-    src: "/brand.png",
+    src: "/cheetos.png",
   },
   {
-    src: "/brand.png",
+    src: "/chewy.png",
   },
   {
-    src: "/brand.png",
+    src: "/comfort zone.png",
   },
   {
-    src: "/brand.png",
+    src: "/coralife.png",
   },
   {
-    src: "/brand.png",
+    src: "/cracker jack.png",
+  },
+  {
+    src: "/danner.png",
+  },
+  {
+    src: "/dickies.png",
+  },
+  {
+    src: "/DMC.png",
+  },
+  {
+    src: "/doritos.png",
+  },
+  {
+    src: "/eaten path.png",
+  },
+  {
+    src: "/farnam.png",
+  },
+  {
+    src: "/favertree.png",
+  },
+  {
+    src: "/four paws.png",
+  },
+  {
+    src: "/frida.png",
+  },
+  {
+    src: "/fritos.png",
+  },
+  {
+    src: "/four paws.png",
+  },
+  {
+    src: "/frida.png",
   },
 ];
 

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   --tw-text-opacity: 1;
@@ -230,4 +234,23 @@ body {
     rgba(56, 2, 155, 0)
   );
   border-image-slice: 1;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  animation: infiniteScroll 1s linear infinite; /* Adjust timing as needed */
+  flex: 0 0 auto;
+}
+
+.brands-section .flex {
+  /* Adjust transition duration and timing function for a smoother scroll */
+  transition: transform 0.5s ease-in-out;
 }

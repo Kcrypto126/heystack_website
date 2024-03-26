@@ -11,7 +11,7 @@ function TestimonialCard() {
       <Carousel
         loop
         scrollSnap
-        cols={4}
+        cols={3}
         rows={1}
         gap={10}
         mobileBreakpoint={20}
@@ -23,12 +23,12 @@ function TestimonialCard() {
       >
         {testimonial.map((item, index) => (
           <Carousel.Item key={index}>
-            <div className=" border-2 px-8 py-8 flex flex-col gap-3 testimonial-card">
-              <p className=" text-base font-bold testimonial-heading">
+            <div className="flex flex-col gap-3 px-8 py-8 border-2  testimonial-card">
+              <p className="text-base font-bold  testimonial-heading">
                 “{item.heading}”
               </p>
               <p className="text-sm testimonial-content">{item.content}</p>
-              <div className="flex gap-4  items-center">
+              <div className="flex items-center gap-4">
                 <div>
                   <Image
                     src={item.imgLink}
@@ -39,7 +39,7 @@ function TestimonialCard() {
                   />
                 </div>
                 <div>
-                  <p className=" text-sm font-bold">{item.name}</p>
+                  <p className="text-sm font-bold ">{item.name}</p>
                   <p className="text-sm testimonial-content">
                     {item.designation}
                   </p>

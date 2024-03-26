@@ -1,16 +1,20 @@
 "use client";
 import React from "react";
-import Carousel from "better-react-carousel";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import partners from "../constants/partners";
 import Image from "next/image";
-import { Retailbreakpoints } from "@/constants/breakpoints";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import Container from "./Container";
-import { Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css/navigation";
+
+import "swiper/css";
 
 function RetailPartner() {
+  const swiper = useSwiper();
   return (
-    <div className="brands-section">
+    <div>
       <Container>
         <div className="w-full mx-auto mt-8">
           <p className="text-3xl font-bold text-center sm:text-4xl heading">
@@ -18,94 +22,58 @@ function RetailPartner() {
           </p>
           <div className="md:mt-8">
             <div className="mx-auto">
-              <div className="ease-linear delay-100">
+              <div className="">
                 <Swiper
-                  autoplay={{
-                    delay: 0,
-                    pauseOnMouseEnter: true,
-                  }}
                   spaceBetween={30}
+                  navigation={true}
                   initialSlide={1}
-                  speed={7000}
-                  freeMode={false}
-                  slidesPerView={6}
+                  slidesPerView={1}
                   loop={true}
-                  slidesPerGroupAuto={true}
-                  centeredSlides={true}
-                  modules={[Autoplay]}
                   reverseDirection={true}
                   breakpoints={{
                     320: {
                       slidesPerView: 3,
+                      spaceBetween: 20,
                     },
                     640: {
-                      slidesPerView: 5,
+                      slidesPerView: 6,
                     },
                   }}
-                  className="ease-linear"
-                  style={{ transitionTimingFunction: "linear" }}
+                  modules={[Navigation]}
                 >
                   {partners.map((item, ind) => (
-                    <SwiperSlide
-                      key={ind}
-                      className="py-10"
-                      style={{ transitionTimingFunction: "linear" }}
-                    >
-                      <div className="object-contain w-full h-full py-2 rounded-lg drop-shadow-lg border-primary retail-div">
+                    <SwiperSlide key={ind} className="relative py-10">
+                      <div className="flex flex-col items-center justify-center gap-10">
+                        <Image
+                          alt="image"
+                          src={item.src}
+                          className={`object-contain w-full rounded-xl`}
+                          height={"100"}
+                          width={"80"}
+                        />
                         <Image
                           alt="image"
                           src={item.src}
                           className={`object-contain w-full h-full rounded-xl`}
                           height={"100"}
-                          width={"100"}
+                          width={"80"}
                         />
                       </div>
                     </SwiperSlide>
                   ))}
-                </Swiper>
-                <Swiper
-                  autoplay={{
-                    delay: 0,
-                    pauseOnMouseEnter: true,
-                  }}
-                  slidesPerGroupAuto={true}
-                  reverseDirection={true}
-                  spaceBetween={30}
-                  initialSlide={1}
-                  speed={7000}
-                  freeMode={false}
-                  slidesPerView={6}
-                  loop={true}
-                  centeredSlides={true}
-                  modules={[Autoplay]}
-                  breakpoints={{
-                    320: {
-                      slidesPerView: 3,
-                    },
-                    640: {
-                      slidesPerView: 5,
-                    },
-                  }}
-                  className="-my-12 ease-linear swiper-container"
-                  style={{ transitionTimingFunction: "linear" }}
-                >
-                  {partners.map((item, ind) => (
-                    <SwiperSlide
-                      key={ind}
-                      className="py-10"
-                      style={{ transitionTimingFunction: "linear" }}
-                    >
-                      <div className="object-contain w-full h-full py-2 rounded-lg drop-shadow-lg border-primary retail-div">
-                        <Image
-                          alt="image"
-                          src={item.src}
-                          className={`object-contain w-full h-full rounded-xl`}
-                          height={"100"}
-                          width={"100"}
-                        />
-                      </div>
-                    </SwiperSlide>
-                  ))}
+                  <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                    <BsChevronCompactLeft
+                      onClick={() => swiper.slidePrev()}
+                      size={24}
+                    />
+                  </div>
+                  {/* Right Arrow */}
+                  <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  right-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                    <BsChevronCompactRight
+                      onClick={() => swiper.slideNext()}
+                      size={24}
+                    />
+                  </div>
                 </Swiper>
               </div>
             </div>

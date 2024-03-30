@@ -16,7 +16,7 @@ export default function Brands() {
         Brands that <span className="text-secondary">trust us</span>
       </p>
       <Slider items={firstHalf} />
-      <Slider items={secondHalf} direction="left" className="-mt-10" />
+      <Slider items={secondHalf} direction="left" speed="slow" className="" />
     </div>
   );
 }

@@ -5,19 +5,19 @@ export const navLinks = [
   },
   {
     name: "Customers",
-    links: "/",
+    links: "#customers",
   },
   {
     name: "Products",
-    links: "/",
+    links: "#products",
   },
   {
     name: "Technology",
-    links: "/",
+    links: "#technology",
   },
   {
     name: "Retailers",
-    links: "/",
+    links: "#retailers",
   },
   {
     name: "Blogs",

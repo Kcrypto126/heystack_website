@@ -60,7 +60,7 @@ const brands = [
     src: "/farnam.png",
   },
   {
-    src: "/favertree.png",
+    src: "/fevertree.png",
   },
   {
     src: "/four paws.png",

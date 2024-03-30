@@ -8,7 +8,7 @@ import Container from "./Container";
 
 const Carousal = () => {
   return (
-    <Container>
+    <Container id={"customers"}>
       <Carousel
         loop
         showDots

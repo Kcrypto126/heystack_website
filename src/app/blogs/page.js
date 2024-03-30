@@ -41,26 +41,28 @@ const Page = () => {
 
   return (
     <div>
-      <FeaturedPost post={Posts[0]} />
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl lg:mx-auto gap-8 md:mx-8 mx-5">
-        {!loading && !error ? (
-          currentPosts.map(({ cursor, node }) => {
-            return <PostCard key={cursor} post={node} />;
-          })
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div>
-      <Paginate
-        postsPerPage={postsPerPage}
-        totalPosts={Posts.length}
-        currentPage={currentPage}
-        paginate={paginate}
-        previousPage={previousPage}
-        nextPage={nextPage}
-      />
-      <NewsLetter />
-      <BookDemo />
+      {!loading && !error ? (
+        <>
+          {Posts[0] && <FeaturedPost post={Posts[0]} />}
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl lg:mx-auto gap-8 md:mx-8 mx-5">
+            {currentPosts.map(({ cursor, node }) => {
+              return <PostCard key={cursor} post={node} />;
+            })}
+          </div>
+          <Paginate
+            postsPerPage={postsPerPage}
+            totalPosts={Posts.length}
+            currentPage={currentPage}
+            paginate={paginate}
+            previousPage={previousPage}
+            nextPage={nextPage}
+          />
+          <NewsLetter />
+          <BookDemo />
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

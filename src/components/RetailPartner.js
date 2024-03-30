@@ -30,6 +30,7 @@ function RetailPartner() {
                   slidesPerView={1}
                   loop={true}
                   reverseDirection={true}
+                  autoplay={true}
                   breakpoints={{
                     320: {
                       slidesPerView: 3,
@@ -41,26 +42,28 @@ function RetailPartner() {
                   }}
                   modules={[Navigation]}
                 >
-                  {partners.map((item, ind) => (
-                    <SwiperSlide key={ind} className="relative py-10">
-                      <div className="flex flex-col items-center justify-center gap-10">
-                        <Image
-                          alt="image"
-                          src={item.src}
-                          className={`object-contain w-full rounded-xl`}
-                          height={"100"}
-                          width={"80"}
-                        />
-                        <Image
-                          alt="image"
-                          src={item.src}
-                          className={`object-contain w-full h-full rounded-xl`}
-                          height={"100"}
-                          width={"80"}
-                        />
-                      </div>
-                    </SwiperSlide>
-                  ))}
+                  {partners
+                    .reduce((result, value, index, array) => {
+                      if (index % 2 === 0)
+                        result.push(array.slice(index, index + 2));
+                      return result;
+                    }, [])
+                    .map((itemPair, ind) => (
+                      <SwiperSlide key={ind} className="relative py-10">
+                        <div className="flex flex-col items-center justify-center gap-5 ">
+                          {itemPair.map((item, index) => (
+                            <Image
+                              key={index}
+                              alt="image"
+                              src={item.src}
+                              className={` rounded-xl `}
+                              height={"300"}
+                              width={"100"}
+                            />
+                          ))}
+                        </div>
+                      </SwiperSlide>
+                    ))}
                   <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
                     <BsChevronCompactLeft
                       onClick={() => swiper.slidePrev()}

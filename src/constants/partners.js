@@ -1,75 +1,77 @@
+import { Rei } from "@/assets/Retailers";
+
 const partners = [
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
   {
-    src: "/brand.png",
+    src: Rei,
   },
 ];
 

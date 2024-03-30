@@ -78,11 +78,11 @@ export default function Slider({
         )}
       >
         {brands.map((item, idx) => (
-          <div className="w-full h-full" key={idx}>
+          <div className="w-full h-full cursor-pointer" key={idx}>
             <Image
               alt="image"
               src={item.src}
-              className={`w-full h-full`}
+              className={`w-full h-full cursor-pointer`}
               height={"200"}
               width={"300"}
             />

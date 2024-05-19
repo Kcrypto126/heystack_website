@@ -2,9 +2,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
 import { ApolloWrapper } from "@/utils/apollo-wrapper";
-import NavBar from "@/components/NavBar";
 import MobileNavbar from "@/components/MobileNavBar";
-import { BlogsProvider } from "@/context/BlogContext";
 import Top from "@/components/Top";
 
 const poppins = Poppins({

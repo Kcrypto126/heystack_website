@@ -14,76 +14,73 @@ import "swiper/css";
 function RetailPartner() {
   const swiper = useSwiper();
   return (
-    <div>
-      <Container>
-        <div className="w-full mx-auto mt-8">
-          <p className="text-3xl font-bold text-center sm:text-4xl heading">
-            Retail Partners
-          </p>
-          <div className="md:mt-8">
-            <div className="mx-auto">
-              <div className="">
-                <Swiper
-                  spaceBetween={30}
-                  navigation={true}
-                  initialSlide={1}
-                  slidesPerView={1}
-                  loop={true}
-                  reverseDirection={true}
-                  autoplay={true}
-                  breakpoints={{
-                    320: {
-                      slidesPerView: 3,
-                      spaceBetween: 20,
-                    },
-                    640: {
-                      slidesPerView: 6,
-                    },
-                  }}
-                  modules={[Navigation]}
-                >
-                  {partners
-                    .reduce((result, value, index, array) => {
-                      if (index % 2 === 0)
-                        result.push(array.slice(index, index + 2));
-                      return result;
-                    }, [])
-                    .map((itemPair, ind) => (
-                      <SwiperSlide key={ind} className="relative py-10">
-                        <div className="flex flex-col items-center justify-center gap-5 ">
-                          {itemPair.map((item, index) => (
-                            <Image
-                              key={index}
-                              alt="image"
-                              src={item.src}
-                              className={` rounded-xl `}
-                              height={"300"}
-                              width={"100"}
-                            />
-                          ))}
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
-                    <BsChevronCompactLeft
-                      onClick={() => swiper.slidePrev()}
-                      size={24}
-                    />
-                  </div>
-                  {/* Right Arrow */}
-                  <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  right-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
-                    <BsChevronCompactRight
-                      onClick={() => swiper.slideNext()}
-                      size={24}
-                    />
-                  </div>
-                </Swiper>
-              </div>
+    <Container>
+      <div className="w-full mx-auto mt-8">
+        <p className="text-3xl font-bold text-center sm:text-4xl heading">
+          Retail Partners
+        </p>
+        <div className="md:mt-8">
+          <div className="mx-auto">
+            <div className="">
+              <Swiper
+                spaceBetween={30}
+                navigation={true}
+                initialSlide={1}
+                slidesPerView={1}
+                loop={true}
+                reversedirection={true}
+                autoplay={true}
+                breakpoints={{
+                  320: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  640: {
+                    slidesPerView: 6,
+                  },
+                }}
+                modules={[Navigation]}
+              >
+                {partners
+                  .reduce((result, value, index, array) => {
+                    if (index % 2 === 0)
+                      result.push(array.slice(index, index + 2));
+                    return result;
+                  }, [])
+                  .map((itemPair, ind) => (
+                    <SwiperSlide key={ind} className="relative py-10 px-2">
+                      <div className="flex flex-col items-center justify-center md:gap-10 gap-5  ">
+                        {itemPair.map((item, index) => (
+                          <Image
+                            key={index}
+                            alt="image"
+                            src={item.src}
+                            className={`w-full h-20 object-contain`}
+                            objectFit="cover"
+                          />
+                        ))}
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                  <BsChevronCompactLeft
+                    onClick={() => swiper.slidePrev()}
+                    size={24}
+                  />
+                </div>
+                {/* Right Arrow */}
+                <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  right-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                  <BsChevronCompactRight
+                    onClick={() => swiper.slideNext()}
+                    size={24}
+                  />
+                </div>
+              </Swiper>
             </div>
           </div>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 }
 

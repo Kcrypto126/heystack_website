@@ -1,38 +1,19 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import { navLinks } from "@/constants/navlinks";
-import { white } from "tailwindcss/colors";
+import Modal from "./Modal";
 function NavBar() {
-  const [clientHeight, setClientHeight] = useState(false);
+  const [open, setOpen] = React.useState(false);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollPosition = window.scrollY;
-
-  //     if (scrollPosition > 20) {
-  //       setClientHeight(true);
-  //     }
-  //     if (scrollPosition < 20) {
-  //       setClientHeight(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
 
   return (
-    <header
-    // className={`sticky top-0 left-0 right-0 z-50 transition-all duration-75 ${
-    //   clientHeight ? "bg-white" : ""
-    // }`}
-    >
+    <header>
       <nav
         className={`hidden z-50 relative mx-auto lg:block max-w-7xl transition`}
       >
@@ -62,11 +43,15 @@ function NavBar() {
             ))}
           </div>
           <div className="px-6 py-2 rounded-md bg-[#415082] bg-opacity-10 border-2 border-[#415082]">
-            <button className="capitalize text-[#415082] font-semibold text-[14px]">
+            <button
+              className="capitalize text-[#415082] font-semibold text-[14px]"
+              onClick={toggleOpen}
+            >
               SEE LIVE IN ACTION
             </button>
           </div>
         </div>
+        <Modal open={open} setOpen={setOpen} />
       </nav>
     </header>
   );

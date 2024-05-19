@@ -1,6 +1,7 @@
 import Image from "next/image";
 import NavBar from "./NavBar";
 import Container from "./Container";
+import mobileImage from "../assets/mobile.png";
 
 function Herosection() {
   return (
@@ -19,8 +20,8 @@ function Herosection() {
         />
       </div>
       <Container>
-        <div className="relative z-10 my-16">
-          <div className="flex justify-between">
+        <div className="relative z-10 lg:my-16 my-8">
+          <div className="lg:flex hidden justify-between">
             <div className="text-center max-w-[18rem]">
               <h1 className="text-[#415082] font-semibold text-xl mb-4">
                 Customer segment
@@ -47,12 +48,18 @@ function Herosection() {
             </div>
           </div>
           <iframe
-            className="w-full mx-auto"
+            className="w-full mx-auto lg:block hidden"
             width="1400"
             height="368"
             src="https://rive.app/community/7548-15148-looping-animation-02/embed"
             allowFullScreen
           ></iframe>
+          <Image
+            src={mobileImage}
+            alt="hero"
+            className="w-full  lg:hidden block mx-2"
+            priority
+          />
         </div>
       </Container>
     </div>

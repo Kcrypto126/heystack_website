@@ -9,7 +9,6 @@ function Footer() {
           <p className="w-[10rem] md:text-left text-center">
             Company 1234 5th AVE N. Seattle, WA 98101
           </p>
-          <p></p>
         </div>
         <div className="flex gap-20 flex-wrap justify-center">
           <div className="flex gap-20 ">

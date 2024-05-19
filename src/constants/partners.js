@@ -1,77 +1,150 @@
-import { Rei } from "@/assets/Retailers";
+import {
+  academy,
+  aceHardware,
+  amazon,
+  bh,
+  backcountry,
+  bedBathAndBeyond,
+  bestBuy,
+  bjs,
+  bloomingdales,
+  boots,
+  build,
+  buyBuyBaby,
+  carlsGolfLand,
+  chewy,
+  costco,
+  cvsPharmacy,
+  dicks,
+  dillards,
+  dsw,
+  famousFootwear,
+  goldGalaxy,
+  hsn,
+  jcPenny,
+  jet,
+  kohls,
+  saksFifthAvenue,
+  lowes,
+  macys,
+  neimanMarcus,
+  overstock,
+  pgaTourSuperstore,
+  rei,
+  roadRunner,
+  rockCreek,
+  sainsbury,
+  samsClub,
+} from "../assets/Retail_Partners/index";
 
 const partners = [
   {
-    src: Rei,
+    src: academy,
   },
   {
-    src: Rei,
+    src: aceHardware,
   },
   {
-    src: Rei,
+    src: amazon,
   },
   {
-    src: Rei,
+    src: bh,
   },
   {
-    src: Rei,
+    src: backcountry,
   },
   {
-    src: Rei,
+    src: bedBathAndBeyond,
   },
   {
-    src: Rei,
+    src: bestBuy,
   },
   {
-    src: Rei,
+    src: bjs,
   },
   {
-    src: Rei,
+    src: bloomingdales,
   },
   {
-    src: Rei,
+    src: boots,
   },
   {
-    src: Rei,
+    src: build,
   },
   {
-    src: Rei,
+    src: buyBuyBaby,
   },
   {
-    src: Rei,
+    src: carlsGolfLand,
   },
   {
-    src: Rei,
+    src: chewy,
   },
   {
-    src: Rei,
+    src: costco,
   },
   {
-    src: Rei,
+    src: cvsPharmacy,
   },
   {
-    src: Rei,
+    src: dicks,
   },
   {
-    src: Rei,
+    src: dillards,
   },
   {
-    src: Rei,
+    src: dsw,
   },
   {
-    src: Rei,
+    src: famousFootwear,
   },
   {
-    src: Rei,
+    src: goldGalaxy,
   },
   {
-    src: Rei,
+    src: hsn,
   },
   {
-    src: Rei,
+    src: jcPenny,
   },
   {
-    src: Rei,
+    src: jet,
+  },
+  {
+    src: kohls,
+  },
+  {
+    src: saksFifthAvenue,
+  },
+  {
+    src: lowes,
+  },
+  {
+    src: macys,
+  },
+  {
+    src: neimanMarcus,
+  },
+  {
+    src: overstock,
+  },
+  {
+    src: pgaTourSuperstore,
+  },
+  {
+    src: rei,
+  },
+  {
+    src: roadRunner,
+  },
+  {
+    src: rockCreek,
+  },
+  {
+    src: sainsbury,
+  },
+  {
+    src: samsClub,
   },
 ];
 

@@ -4,7 +4,7 @@ import Container from "./Container";
 
 function Work() {
   return (
-    <div className="work">
+    <div className="work" id="products">
       <Container>
         <div className="">
           <div className="px-1">

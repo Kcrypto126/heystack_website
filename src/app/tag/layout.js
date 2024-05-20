@@ -14,14 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <BlogsProvider>
-          <NavBar />
-          {children}
-          <Footer />
-        </BlogsProvider>
-      </body>
-    </html>
+    <>
+      <BlogsProvider>
+        <NavBar />
+        {children}
+        <Footer />
+      </BlogsProvider>
+    </>
   );
 }

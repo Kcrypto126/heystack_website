@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./Container";
+import Link from "next/link";
 
 function Tab() {
   return (
@@ -18,9 +19,11 @@ function Tab() {
               Target, and 100’s of other retailer websites in a{" "}
             </p>
             <div className="mt-6 text-center">
-              <button className="px-6 py-1 transition btn hover:opacity-80">
-                Live Demo
-              </button>
+              <Link href="https://hey-stack.com/login.html" target="_blank">
+                <button className="px-6 py-1 transition btn hover:opacity-80">
+                  Live Demo
+                </button>
+              </Link>
               <div className="z-10 absolute right-[-2%] bottom-[-9%]">
                 <Image
                   src={"/circle.svg"}

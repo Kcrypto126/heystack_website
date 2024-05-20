@@ -3,7 +3,7 @@ import Container from "./Container";
 
 function Features() {
   return (
-    <section className="bg-gradient-to-b from-[#EAF0FF]">
+    <section className="bg-gradient-to-b from-[#EAF0FF]" id="technology">
       <Container>
         <h1 className="px-3 text-3xl text-center sm:text-4xl heading">
           What is Unique about Heystack?

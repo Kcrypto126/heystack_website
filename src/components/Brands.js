@@ -11,7 +11,7 @@ export default function Brands() {
   const secondHalf = brands.slice(midpoint);
 
   return (
-    <div className="py-8 md:py-16">
+    <div className="py-8 md:py-16" id="customers">
       <p className="text-3xl font-bold text-center sm:text-4xl md:mb-8">
         Brands that <span className="text-secondary">trust us</span>
       </p>

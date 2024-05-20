@@ -19,11 +19,13 @@ function NavBar() {
       >
         <div className="flex items-center justify-between gap-10  py-5">
           <Link href="/">
-            <div className="flex items-center justify-center gap-2 mr-auto">
-              <Image src={"/logo.png"} width={"28"} height="28" alt="logo" />
-              <p className="text-xl font-bold text-[#415082] tracking-wider">
-                Heystack
-              </p>
+            <div>
+              <div className="flex items-center justify-center gap-2 mr-auto">
+                <Image src={"/logo.png"} width={"28"} height="28" alt="logo" />
+                <p className="text-xl font-bold text-[#415082] tracking-wider">
+                  Heystack
+                </p>
+              </div>
             </div>
           </Link>
           <div className="flex gap-6 px-10 font-medium text-gray-900">

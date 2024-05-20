@@ -15,7 +15,7 @@ function RetailPartner() {
   const swiper = useSwiper();
   return (
     <Container>
-      <div className="w-full mx-auto mt-8">
+      <div className="w-full mx-auto mt-8" id="retailers">
         <p className="text-3xl font-bold text-center sm:text-4xl heading">
           Retail Partners
         </p>
@@ -55,7 +55,7 @@ function RetailPartner() {
                             key={index}
                             alt="image"
                             src={item.src}
-                            className={`w-full h-20 object-contain`}
+                            className={`w-full h-16 object-contain`}
                             objectFit="cover"
                           />
                         ))}

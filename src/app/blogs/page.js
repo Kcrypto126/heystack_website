@@ -1,24 +1,30 @@
 "use client";
 import { FeaturedPost, PostCard } from "@/components/Blogs";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Paginate from "@/utils/paginate";
-import { ALL_POSTS, posts } from "@/constants/dummy";
-import Tab from "@/components/Tab";
 import { useBlogs } from "@/context/BlogContext";
 import NewsLetter from "@/components/Blogs/NewsLetter";
 import BookDemo from "@/components/Blogs/BookDemo";
+import Loading from "./loading";
+import LoadingScreen from "@/components/Blogs/LoadingScreen";
 
 const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostPerPage] = useState(6);
+  const [postsPerPage] = useState(6);
+  const [mounted, setMounted] = useState(false);
 
   const { loading, error, Posts } = useBlogs();
 
-  if (Posts.length == 0) return;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  // test - data;
-  // const Posts = ALL_POSTS.data.postsConnection.edges;
-  // const { loading, error } = false;
+  if (!mounted) return <LoadingScreen />;
+
+  if (loading) return <LoadingScreen />;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!Posts || Posts.length === 0) return <div>No posts found</div>;
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = Posts.slice(indexOfFirstPost, indexOfLastPost);

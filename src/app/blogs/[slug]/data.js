@@ -1,19 +1,29 @@
 "use client";
-import React from "react";
-import { useSuspenseQuery } from "@apollo/client";
+import React, { useEffect, useState } from "react";
+import { useQuery } from "@apollo/client";
 import { GET_SINGLE_POST } from "@/services/queries";
 import { Author, PostDetail } from "@/components/Blogs";
 import PostHeader from "@/components/Blogs/PostHeader";
 import TableofContent from "@/components/Blogs/TableofContent";
-import { POSTS } from "@/constants/dummy";
 import Recommendations from "@/components/Blogs/Recommendations";
-import { Form } from "@/components/Blogs/NewsLetter";
+import LoadingScreen from "@/components/Blogs/LoadingScreen";
 
 const PostData = ({ params }) => {
-  const { loading, error, data } = useSuspenseQuery(GET_SINGLE_POST, {
+  const [mounted, setMounted] = useState(false);
+  const { loading, error, data } = useQuery(GET_SINGLE_POST, {
     variables: { slug: params?.slug },
+    skip: !mounted, // Skip the query during SSR
   });
-  const { author, title, summary, content, coverImage, date } = data?.post;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || loading) return <LoadingScreen />;
+  if (error) return <div>Error: {error.message}</div>;
+
+  const { author, title, summary, content, coverImage, date } =
+    data?.post || {};
 
   const TableOfContent = [];
   content?.json?.children?.forEach((item) => {
@@ -28,30 +38,17 @@ const PostData = ({ params }) => {
       TableOfContent.push(item?.children[0]?.text);
   });
 
-  //test data
-
-  // const data = POSTS.data.postsConnection.edges[1];
-  // const { loading, error } = false;
-  // const { author, title, summary, content, coverImage, date } = data?.node;
-
   return (
     <>
       <div className="grid lg:grid-cols-3 grid-cols-1 max-w-7xl lg:mx-auto md:mx-8 mx-5 my-20 gap-8">
         <article className="max-w-4xl col-span-2">
-          {!loading && !error ? (
-            <div>
-              <PostHeader
-                _title={title}
-                _summary={summary}
-                _coverImage={coverImage}
-                _date={date}
-              />
-
-              <PostDetail content={content} />
-            </div>
-          ) : (
-            <p>Loading...</p>
-          )}
+          <PostHeader
+            _title={title}
+            _summary={summary}
+            _coverImage={coverImage}
+            _date={date}
+          />
+          <PostDetail content={content} />
         </article>
 
         <div className="lg:flex flex-col hidden items-center justify-start">

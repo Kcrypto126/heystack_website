@@ -19,8 +19,8 @@ export default function Error({ error, reset }) {
             Something&apos;s missing.
           </p>
           <p class="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Sorry, we can't find that page. You'll find lots to explore on the
-            home page.{" "}
+            Sorry, we can&apos;t find that page. You&apos;ll find lots to
+            explore on the home page.{" "}
           </p>
           <a
             href="#"

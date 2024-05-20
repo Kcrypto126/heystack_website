@@ -17,21 +17,25 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(
-      "https://us.locogram.com/Contactus/email.json",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    try {
+      const response = await fetch(
+        "https://us.locogram.com/Contactus/email.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-    if (response.ok) {
-      alert("Thanks for submitting the form! we will get back to you soon.");
-    } else {
-      console.error("There is some Error submitting form data");
+      if (!response.ok) {
+        console.error("Server responded with an error", response);
+      } else {
+        alert("Thanks for submitting the form! we will get back to you soon.");
+      }
+    } catch (error) {
+      console.error("An error occurred while fetching", error);
     }
   };
 

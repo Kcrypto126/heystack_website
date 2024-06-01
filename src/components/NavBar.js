@@ -44,7 +44,7 @@ function NavBar() {
               </Link>
             ))}
           </div>
-          <div className="px-6 py-2 rounded-md bg-[#415082] bg-opacity-10 border-2 border-[#415082]">
+          <div className="px-8 py-1.5 rounded-md bg-[#415082] bg-opacity-10 border-2 border-[#415082]">
             <button
               className="capitalize text-[#415082] font-semibold text-[14px]"
               onClick={toggleOpen}

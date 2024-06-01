@@ -1,6 +1,7 @@
 import work from "@/constants/work";
 import Image from "next/image";
 import Container from "./Container";
+import Link from "next/link";
 
 function Work() {
   return (
@@ -28,18 +29,24 @@ function Work() {
                   </p>
                   <span className="h-[0.5px] w-[90%] bg-gray-300"></span>
 
-                  <Image
-                    src={"/arrow.svg"}
-                    width="200"
-                    height="100"
-                    alt="btn"
-                    className="cursor-pointer"
-                    draggable={false}
-                  />
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={"/arrow.svg"}
+                      width="200"
+                      height="100"
+                      alt="btn"
+                      className="cursor-pointer"
+                      draggable={false}
+                    />
+                  </Link>
                 </div>
                 <div className="md:basis-[60%] md:mt-0 mt-10 flex justify-center items-center relative">
                   <Image
-                    src={"/content.png"}
+                    src={item.src}
                     height={"150"}
                     width={"350"}
                     alt="content"

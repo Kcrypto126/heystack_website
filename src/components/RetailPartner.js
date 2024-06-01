@@ -62,14 +62,14 @@ function RetailPartner() {
                       </div>
                     </SwiperSlide>
                   ))}
-                <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                <div className="mr-4 hidden group-hover:block absolute top-[40%] -translate-x-0  left-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
                   <BsChevronCompactLeft
                     onClick={() => swiper.slidePrev()}
                     size={24}
                   />
                 </div>
                 {/* Right Arrow */}
-                <div className=" hidden group-hover:block absolute top-[40%] -translate-x-0  right-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
+                <div className="ml-4 hidden group-hover:block absolute top-[40%] -translate-x-0  right-0 text-xl rounded-full p-2 bg-black/30 text-white hover:bg-white hover:text-black  cursor-pointer">
                   <BsChevronCompactRight
                     onClick={() => swiper.slideNext()}
                     size={24}

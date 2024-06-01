@@ -4,8 +4,9 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
 import ContactForm from "./ContactForm";
+import JobForm from "./JobForm";
 
-export default function Modal({ open, setOpen }) {
+export default function JobModal({ open, setOpen }) {
   const cancelButtonRef = useRef(null);
 
   return (
@@ -52,41 +53,12 @@ export default function Modal({ open, setOpen }) {
                         as="h3"
                         className="text-base font-semibold leading-6 text-gray-900"
                       >
-                        Book a Free Deep-Dive Session
+                        Apply for the open Position
                       </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                          In this session we will understand your challenges and
-                          discuss how you could address them using Heystack. In
-                          addition, we will also demostrate how some of the
-                          leading brands in your vertical are using Heystack to
-                          get answers to questions like:
-                        </p>
-                        <ul className="list-disc my-2">
-                          <li className="mt-2 text-sm text-gray-500">
-                            What is the overall customer perception and who is
-                            the market leader?
-                          </li>
-                          <li className="mt-2 text-sm text-gray-500">
-                            What are the key purchase drivers and where do I
-                            stand among my competitors?
-                          </li>
-                          <li className="mt-2 text-sm text-gray-500">
-                            What are top issues or compliments that have the
-                            highest impact on my sales?
-                          </li>
-                          <li className="mt-2 text-sm text-gray-500">
-                            What should I do to improve product satisfaction and
-                            which SKUs should I focus on?
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </div>
-
-                <ContactForm />
-
+                <JobForm />
                 <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                   <button
                     type="button"

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ApolloWrapper } from "@/utils/apollo-wrapper";
 import MobileNavbar from "@/components/MobileNavBar";
 import Top from "@/components/Top";
+import Navbar from "@/components/MobileNavBar";
 
 const poppins = Poppins({
   subsets: ["latin"],

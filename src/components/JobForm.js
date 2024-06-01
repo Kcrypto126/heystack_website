@@ -2,13 +2,16 @@
 import React from "react";
 import { useState } from "react";
 
-const ContactForm = () => {
+const JobForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
+    role: "",
+    location: "",
+    linkedIn: "",
     message: "",
-    type: "demo",
+    type: "career",
   });
 
   const handleChange = (e) => {
@@ -25,8 +28,10 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-        query: { type: "demo " },
+        query: { type: "career " },
       });
+
+      console.log(response);
 
       if (!response.ok) {
         console.error("Server responded with an error", response);
@@ -74,22 +79,73 @@ const ContactForm = () => {
           />
         </div>
       </div>
-
-      <div className="mb-4">
-        <label
-          htmlFor="subject"
-          className="block text-sm font-semibold text-gray-700"
-        >
-          Subject
-        </label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-          onChange={handleChange}
-          required
-        />
+      <div className="grid md:grid-cols-2  grid-cols-1 gap-4">
+        <div className="mb-4">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Phone
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="phone"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="role"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Role
+          </label>
+          <input
+            type="text"
+            id="role"
+            name="role"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
+      <div className="grid md:grid-cols-2  grid-cols-1 gap-4">
+        <div className="mb-4">
+          <label
+            htmlFor="location"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Location
+          </label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="linkedIn"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            LinkedIn
+          </label>
+          <input
+            type="text"
+            id="linkedIn"
+            name="linkedIn"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
 
       <div className="mb-4">
@@ -119,4 +175,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default JobForm;

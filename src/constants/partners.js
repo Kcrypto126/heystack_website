@@ -2,42 +2,90 @@ import {
   academy,
   aceHardware,
   amazon,
-  bh,
+  americasTire,
+  bAndH,
   backcountry,
   bedBathAndBeyond,
   bestBuy,
+  big5,
   bjs,
   bloomingdales,
   boots,
-  build,
+  buildCom,
   buyBuyBaby,
+  cabelas,
   carlsGolfLand,
   chewy,
+  chrono24,
   costco,
+  crateAndBarrel,
   cvsPharmacy,
+  cycleGear,
   dicks,
   dillards,
+  discountTireDirect,
   dsw,
   famousFootwear,
+  fcmoto,
+  fragrancenet,
+  fragrancex,
+  frys,
+  gnc,
   goldGalaxy,
   hsn,
+  influenster,
+  instacart,
   jcPenny,
   jet,
+  jomashop,
   kohls,
-  saksFifthAvenue,
+  kroger,
+  laksFifthAvenue,
   lowes,
   macys,
+  mattressFirm,
+  moosejaw,
   neimanMarcus,
+  newegg,
+  nordstrom,
   overstock,
+  pepboys,
+  petco,
+  petsmart,
   pgaTourSuperstore,
+  priorityTire,
+  rbe,
   rei,
+  revzilla,
   roadRunner,
   rockCreek,
-  sainsbury,
+  sainsBury,
   samsClub,
-} from "../assets/Retail_Partners/index";
+  sears,
+  sephora,
+  serra,
+  shoesCom,
+  surLaTable,
+  target,
+  theHomeDepot,
+  tigerdirect,
+  tireBuyer,
+  tirerack,
+  tractorSupplyCo,
+  trailSpace,
+  ulta,
+  usMattress,
+  vitamineShoppe,
+  walgreens,
+  walkingCo,
+  walmart,
+  watchesCom,
+  wayfair,
+  williamsSonoma,
+  zappos,
+} from "../assets/Retailers";
 
-const partners = [
+export const partners = [
   {
     src: academy,
   },
@@ -48,7 +96,10 @@ const partners = [
     src: amazon,
   },
   {
-    src: bh,
+    src: americasTire,
+  },
+  {
+    src: bAndH,
   },
   {
     src: backcountry,
@@ -60,6 +111,9 @@ const partners = [
     src: bestBuy,
   },
   {
+    src: big5,
+  },
+  {
     src: bjs,
   },
   {
@@ -69,10 +123,13 @@ const partners = [
     src: boots,
   },
   {
-    src: build,
+    src: buildCom,
   },
   {
     src: buyBuyBaby,
+  },
+  {
+    src: cabelas,
   },
   {
     src: carlsGolfLand,
@@ -81,10 +138,19 @@ const partners = [
     src: chewy,
   },
   {
+    src: chrono24,
+  },
+  {
     src: costco,
   },
   {
+    src: crateAndBarrel,
+  },
+  {
     src: cvsPharmacy,
+  },
+  {
+    src: cycleGear,
   },
   {
     src: dicks,
@@ -93,10 +159,28 @@ const partners = [
     src: dillards,
   },
   {
+    src: discountTireDirect,
+  },
+  {
     src: dsw,
   },
   {
     src: famousFootwear,
+  },
+  {
+    src: fcmoto,
+  },
+  {
+    src: fragrancenet,
+  },
+  {
+    src: fragrancex,
+  },
+  {
+    src: frys,
+  },
+  {
+    src: gnc,
   },
   {
     src: goldGalaxy,
@@ -105,16 +189,28 @@ const partners = [
     src: hsn,
   },
   {
+    src: influenster,
+  },
+  {
+    src: instacart,
+  },
+  {
     src: jcPenny,
   },
   {
     src: jet,
   },
   {
+    src: jomashop,
+  },
+  {
     src: kohls,
   },
   {
-    src: saksFifthAvenue,
+    src: kroger,
+  },
+  {
+    src: laksFifthAvenue,
   },
   {
     src: lowes,
@@ -123,16 +219,46 @@ const partners = [
     src: macys,
   },
   {
+    src: mattressFirm,
+  },
+  {
+    src: moosejaw,
+  },
+  {
     src: neimanMarcus,
+  },
+  {
+    src: newegg,
+  },
+  {
+    src: nordstrom,
   },
   {
     src: overstock,
   },
   {
+    src: pepboys,
+  },
+  {
+    src: petco,
+  },
+  {
+    src: petsmart,
+  },
+  {
     src: pgaTourSuperstore,
   },
   {
+    src: priorityTire,
+  },
+  {
+    src: rbe,
+  },
+  {
     src: rei,
+  },
+  {
+    src: revzilla,
   },
   {
     src: roadRunner,
@@ -141,11 +267,75 @@ const partners = [
     src: rockCreek,
   },
   {
-    src: sainsbury,
+    src: sainsBury,
   },
   {
     src: samsClub,
   },
+  {
+    src: sears,
+  },
+  {
+    src: sephora,
+  },
+  {
+    src: serra,
+  },
+  {
+    src: shoesCom,
+  },
+  {
+    src: surLaTable,
+  },
+  {
+    src: target,
+  },
+  {
+    src: theHomeDepot,
+  },
+  {
+    src: tigerdirect,
+  },
+  {
+    src: tireBuyer,
+  },
+  {
+    src: tirerack,
+  },
+  {
+    src: tractorSupplyCo,
+  },
+  {
+    src: trailSpace,
+  },
+  {
+    src: ulta,
+  },
+  {
+    src: usMattress,
+  },
+  {
+    src: vitamineShoppe,
+  },
+  {
+    src: walgreens,
+  },
+  {
+    src: walkingCo,
+  },
+  {
+    src: walmart,
+  },
+  {
+    src: watchesCom,
+  },
+  {
+    src: wayfair,
+  },
+  {
+    src: williamsSonoma,
+  },
+  {
+    src: zappos,
+  },
 ];
-
-export default partners;

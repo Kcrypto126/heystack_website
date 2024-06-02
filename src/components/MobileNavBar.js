@@ -2,11 +2,18 @@
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { navLinks } from "@/constants/navlinks";
+import Modal from "./Modal";
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full">
       <Popover className="bg-[#e4ecff]">
@@ -61,16 +68,30 @@ const Navbar = () => {
                 <div className="grid grid-cols-1 gap-4  text-[1rem] font-[500]">
                   {navLinks.map((item, ind) => (
                     <div key={item.name}>
-                      <Link href={item.links}>{item.name}</Link>
+                      <Link
+                        href={
+                          item.name === "Home"
+                            ? "/"
+                            : item.name === "Blogs"
+                            ? "/blogs"
+                            : `#${item.name.toLowerCase()}`
+                        }
+                      >
+                        {item.name}
+                      </Link>
                     </div>
                   ))}
                   <div className="bg-[#4150821C] px-4 py-2 rounded-md border-[#415082] border-[1.5px] text-center mt-10">
-                    <button className="text-[#415082] font-semibold ">
+                    <button
+                      className="text-[#415082] font-semibold "
+                      onClick={toggleOpen}
+                    >
                       SEE LIVE IN ACTION
                     </button>
                   </div>
                 </div>
               </div>
+              <Modal open={open} setOpen={setOpen} />
             </div>
           </Popover.Panel>
         </Transition>

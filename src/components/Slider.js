@@ -85,6 +85,7 @@ export default function Slider({
               className={`w-full h-full cursor-pointer`}
               height={"200"}
               width={"300"}
+              priority
             />
           </div>
         ))}

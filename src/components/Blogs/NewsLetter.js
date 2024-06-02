@@ -11,17 +11,40 @@ export function Form() {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     if (!email) {
       setError("Email Can't be empty");
       return;
     }
     setError("");
     setDisabled(true);
-    alert(email);
-    event.preventDefault();
-    setDisabled(false);
-    setSuccssMessage("Thanks for Subscribing to our newsletter");
+
+    const formData = {
+      email,
+      type: "newsletter",
+    };
+
+    try {
+      const response = await fetch("/api/update", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+        query: { type: "career " },
+      });
+
+      if (!response.ok) {
+        console.error("Server responded with an error", response);
+      } else {
+        setDisabled(false);
+        setSuccssMessage("Thanks for Subscribing to our newsletter");
+      }
+    } catch (error) {
+      console.error("An error occurred while fetching", error);
+    }
   };
 
   return (
@@ -57,11 +80,19 @@ export function Form() {
 
             <div className=" text-gray-700 py-1">
               By signing up you agree to our,
-              <a className="text-page font-semibold" href="#" target="_blank">
+              <a
+                className="text-page font-semibold"
+                href="https://hey-stack.com/terms-conditions"
+                target="_blank"
+              >
                 Terms of Use
               </a>
               <span className="px-1">and</span>
-              <a href="#" className="text-page font-semibold" target="_blank">
+              <a
+                href="https://hey-stack.com/privacy-policy"
+                className="text-page font-semibold"
+                target="_blank"
+              >
                 Privacy Policy
               </a>
             </div>

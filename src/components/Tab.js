@@ -19,7 +19,10 @@ function Tab() {
               Target, and 100’s of other retailer websites in a{" "}
             </p>
             <div className="mt-6 text-center">
-              <Link href="https://hey-stack.com/login.html" target="_blank">
+              <Link
+                href="https://calendly.com/sharadkraj/heystack-demo"
+                target="_blank"
+              >
                 <button className="px-6 py-1 transition btn hover:opacity-80">
                   Live Demo
                 </button>

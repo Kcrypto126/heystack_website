@@ -18,17 +18,16 @@ function Footer() {
             get actionable insights.
           </p>
           <div className="flex gap-4 my-2">
-            <Link href="/">
-              <Image src={"/logo.png"} width={"24"} height="24" alt="logo" />
-            </Link>
-            <Link href="/">
-              <Image src={"/logo.png"} width={"24"} height="24" alt="logo" />
-            </Link>
-            <Link href="/">
-              <Image src={"/logo.png"} width={"24"} height="24" alt="logo" />
-            </Link>
-            <Link href="/">
-              <Image src={"/logo.png"} width={"24"} height="24" alt="logo" />
+            <Link
+              href="https://www.linkedin.com/company/hey-stack/"
+              target="_blank"
+            >
+              <Image
+                src={"/linkedin.png"}
+                width={"24"}
+                height="24"
+                alt="logo"
+              />
             </Link>
           </div>
 

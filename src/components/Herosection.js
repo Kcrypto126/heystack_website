@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NavBar from "./NavBar";
 import Container from "./Container";
-import mobileImage from "../assets/mobile.png";
+import mobileImage from "../assets/mobile.svg";
 
 function Herosection() {
   return (

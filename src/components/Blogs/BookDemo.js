@@ -11,7 +11,12 @@ const BookDemo = () => {
           Hey Stack is the most comprehensive analytics solution for aggregating
           and analyzing customer reviews at scale.
         </p>
-        <button className="bg-white rounded-full uppercase font-semibold  text-black py-4 mt-8 px-8 text-sm">
+        <button
+          className="bg-white rounded-full uppercase font-semibold  text-black py-4 mt-8 px-8 text-sm"
+          onClick={() =>
+            window.open("https://calendly.com/sharadkraj/heystack-demo")
+          }
+        >
           see live in action {">"}
         </button>
       </div>

@@ -56,6 +56,9 @@ const PostData = ({ params }) => {
           <TableofContent data={TableOfContent} />
         </div>
       </div>
+      <div className="lg:hidden block mx-5 my-10">
+        <Author writer={author} />
+      </div>
       <hr />
       <Recommendations />
     </>

@@ -28,7 +28,7 @@ const PostHeader = ({ _title, _summary, _coverImage, _date }) => {
           className="object-cover rounded-xl lg:-mb-20 lg:h-[30rem]  h-auto w-full"
         />
       </div>
-      <div className="sticky top-0 bg-white h-4 z-50">
+      <div className="sticky top-0 bg-white h-4 z-50 hidden lg:block">
         <motion.div
           className="h-2 bg-gradient-to-tr from-[#4F31DF] to-[#00C6FF] rounded-full  w-full lg:block hidden mt-24 top-1 relative "
           style={{

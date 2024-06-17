@@ -6,7 +6,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Slider({
-  items,
   direction = "right",
   speed = "slow",
   pauseOnHover = true,
@@ -14,15 +13,17 @@ export default function Slider({
 }) {
   const containerRef = useRef();
   const scrollerRef = useRef();
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
     addAnimation();
   }, []);
-  const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
+      // Duplicate content to create a seamless scrolling effect
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
@@ -30,42 +31,41 @@ export default function Slider({
         }
       });
 
-      getDirection();
-      getSpeed();
+      // Set custom properties for animation
+      setAnimationProperties();
       setStart(true);
     }
   }
-  const getDirection = () => {
+
+  const setAnimationProperties = () => {
     if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
+      // Set direction
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "reverse" : "forwards"
+      );
+
+      // Set speed
+      let duration;
+      switch (speed) {
+        case "fast":
+          duration = "120s"; // Faster speed, shorter duration
+          break;
+        case "normal":
+          duration = "240s"; // Normal speed
+          break;
+        default:
+          duration = "280s"; // Slow speed, longer duration
       }
+      containerRef.current.style.setProperty("--animation-duration", duration);
     }
   };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] ",
+        "scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -73,18 +73,18 @@ export default function Slider({
         ref={scrollerRef}
         className={cn(
           "flex min-w-full shrink-0 gap-2 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {brands.map((item, idx) => (
-          <div className="w-full h-full cursor-pointer" key={idx}>
+          <div className="w-44 h-full cursor-pointer" key={idx}>
             <Image
-              alt="image"
+              alt={item.name}
               src={item.src}
-              className={`w-full h-full cursor-pointer`}
-              height={"200"}
-              width={"300"}
+              width={64}
+              height={64}
+              className="w-full h-full object-contain"
               priority
             />
           </div>

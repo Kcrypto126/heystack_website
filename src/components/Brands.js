@@ -3,11 +3,9 @@ import brands from "@/constants/brands";
 import Slider from "./Slider";
 
 export default function Brands() {
-  // Calculate the midpoint of the array
   const midpoint = Math.ceil(brands.length / 2);
 
-  // Split the array into two equal parts
-  const firstHalf = brands.slice(0, midpoint);
+  const firstHalf = brands.slice(0, midpoint - 1);
   const secondHalf = brands.slice(midpoint);
 
   return (

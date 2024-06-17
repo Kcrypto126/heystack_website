@@ -4,7 +4,10 @@ import Container from "./Container";
 
 function Testimonial() {
   return (
-    <div className="testimonial bg-gradient-to-t from-[#EAF0FF]">
+    <div
+      className="testimonial bg-gradient-to-t from-[#EAF0FF]"
+      id="testimonials"
+    >
       <Container>
         <div>
           <div className="text-center">

@@ -8,7 +8,7 @@ const page = () => {
         Minimize Returns
       </h1>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:mt-10 my-5 lg:gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:mt-10 my-5 lg:gap-8 max-w-6xl lg:mx-auto md:mx-8 mx-4">
         <Image
           src={"/content.png"}
           height={"120"}
@@ -26,7 +26,7 @@ const page = () => {
         </h4>
       </div>
 
-      <section className="max-w-6xl mx-auto my-10">
+      <section className="max-w-6xl  my-10 lg:mx-auto md:mx-8 mx-4">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit
           impedit possimus. Odio similique facere laborum, fugiat atque est.

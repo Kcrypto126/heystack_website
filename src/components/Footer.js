@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 function Footer() {
   return (
     <div className="md:mt-28 mt-20 xl:p-6 text-xl ">
@@ -12,10 +13,10 @@ function Footer() {
               Heystack
             </p>
           </div>
-          <p className="w-[14rem] md:text-left text-left text-xs">
-            A feedback data platform to get a 360 degree view of customer
-            perception of your products. Understand the WHY behind the WHAT and
-            get actionable insights.
+          <p className="w-[14rem] md:text-left text-left ">
+            <span className="font-semibold">Company Headquarters</span> <br />8
+            The Green #8138
+            <br /> Dover, DE 19901
           </p>
           <div className="flex gap-4 my-2">
             <Link
@@ -32,27 +33,32 @@ function Footer() {
           </div>
 
           <div className="flex flex-col mb-5 lg:my-2">
-            <p>Phone: +1 281-865-1192</p>
-            <p>Email: contact@hey-stack.com</p>
+            <p>
+              Phone: <a href="tel:+13022120040">+1 (302) 212-0040</a>{" "}
+            </p>
+            <p>
+              Email:{" "}
+              <a href="mailto: contact@hey-stack.com ">contact@hey-stack.com</a>{" "}
+            </p>
           </div>
         </div>
         <div className="flex gap-20 flex-wrap lg:justify-center">
           <div className="flex gap-20 ">
             <div className="space-y-4">
               <p className="font-bold mb-3">Home</p>
-              <Link href="#customers" className="block">
+              <Link href="/#customers" className="block">
                 Customers
               </Link>
-              <Link href="#products" className="block">
+              <Link href="/#products" className="block">
                 Products
               </Link>
-              <Link href="#testimonials" className="block">
+              <Link href="/#testimonials" className="block">
                 Testimonials
               </Link>
-              <Link href="#technology" className="block">
+              <Link href="/#technology" className="block">
                 Features
               </Link>
-              <Link href="#retailers" className="block">
+              <Link href="/#retailers" className="block">
                 Retail Partners
               </Link>
             </div>
@@ -93,6 +99,13 @@ function Footer() {
           </div>
         </div>
       </div>
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400 py-2">
+        © {new Date().getFullYear()}{" "}
+        <a href="https://hey-stack.com/" class="hover:underline">
+          Hey-Stack™
+        </a>
+        . All Rights Reserved.
+      </span>
     </div>
   );
 }

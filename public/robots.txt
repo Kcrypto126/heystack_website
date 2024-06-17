@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://hey-stack.com/sitemap.xml

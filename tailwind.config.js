@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import colors from "tailwindcss/colors";
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,12 +24,15 @@ module.exports = {
       },
       animation: {
         scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+          "scroll var(--animation-duration, 100s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         scroll: {
+          from: {
+            transform: "translateX(0%)",
+          },
           to: {
-            transform: "translate(calc(-50% - 0.5rem))",
+            transform: "translateX(-50%)", // Move to half the container width to accommodate duplicated content
           },
         },
       },

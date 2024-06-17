@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { navLinks } from "@/constants/navlinks";
 import Modal from "./Modal";
 function NavBar() {
@@ -36,7 +36,7 @@ function NavBar() {
                     ? "/"
                     : item.name === "Blogs"
                     ? "/blogs"
-                    : `#${item.name.toLowerCase()}`
+                    : `/#${item.name.toLowerCase()}`
                 }
                 key={item.name}
               >

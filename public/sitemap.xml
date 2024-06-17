@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://hey-stack.com</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://hey-stack.com/content/minimize_returns</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://hey-stack.com/blogs</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://hey-stack.com/careers</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://hey-stack.com/terms-conditions</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://hey-stack.com/privacy-policy</loc>
+        <lastmod>2024-06-17</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>

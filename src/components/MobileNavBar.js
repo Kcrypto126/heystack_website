@@ -74,7 +74,7 @@ const Navbar = () => {
                             ? "/"
                             : item.name === "Blogs"
                             ? "/blogs"
-                            : `#${item.name.toLowerCase()}`
+                            : `/#${item.name.toLowerCase()}`
                         }
                       >
                         {item.name}

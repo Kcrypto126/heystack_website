@@ -58,7 +58,6 @@ import simply from "./simply.svg";
 import smart_food from "./smart_food.svg";
 import smartfood_smart from "./smartfood_smart.svg";
 import sperry from "./sperry.svg";
-import stacys from "./stacys.svg";
 import sun_chips from "./sun_chips.svg";
 import talbots from "./talbots.svg";
 import targeted_petcare from "./targeted_petcare.svg";
@@ -129,7 +128,6 @@ export {
   smart_food,
   smartfood_smart,
   sperry,
-  stacys,
   sun_chips,
   talbots,
   targeted_petcare,

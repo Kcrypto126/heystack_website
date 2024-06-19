@@ -8,7 +8,7 @@ function Features() {
         <h1 className="px-3 text-3xl text-center sm:text-4xl heading">
           What is Unique about Heystack?
         </h1>
-        <div className="grid grid-cols-1 mt-16 md:grid-cols-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 mt-16 lg:grid-cols-3 md:grid-cols-2">
           <div className="flex flex-col gap-4 p-6 transition border-b border-r cursor-pointer hover:shadow-2xl">
             <Image height={"50"} width={"50"} src="/brain.svg" alt="brain" />
             <h2 className="text-xl font-semibold">

@@ -6,7 +6,7 @@ import { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { navLinks } from "@/constants/navlinks";
-import Modal from "./Modal";
+import Modal from "../Modal";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -46,12 +46,14 @@ const Navbar = () => {
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="mr-auto flex gap-2 items-center justify-center">
-                    <Image
-                      src={"/logo.png"}
-                      width={"28"}
-                      height="28"
-                      alt="logo"
-                    />
+                    <Link href="/">
+                      <Image
+                        src={"/logo.png"}
+                        width={"28"}
+                        height="28"
+                        alt="logo"
+                      />
+                    </Link>
                     <p className="text-[1.3rem] font-bold text-[#415082]">
                       Heystack
                     </p>

@@ -14,7 +14,7 @@ const page = () => {
           height={"120"}
           width={"320"}
           alt="content"
-          className="relative z-20 w-full rounded-lg"
+          className="relative z-20 w-full rounded-lg my-2"
         />
         <h4 className="max-w-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { toastSuccess, toastError } from "@/utils/toast";
+import { toast } from "react-toastify";
 
 export function Form() {
   const [email, setEmail] = useState();
@@ -15,10 +17,9 @@ export function Form() {
     e.preventDefault();
 
     if (!email) {
-      setError("Email Can't be empty");
+      toastError("Please enter a valid email address");
       return;
     }
-    setError("");
     setDisabled(true);
 
     const formData = {
@@ -37,13 +38,15 @@ export function Form() {
       });
 
       if (!response.ok) {
-        console.error("Server responded with an error", response);
+        toastError("Oops!! Server responded with an error");
       } else {
         setDisabled(false);
         setSuccssMessage("Thanks for Subscribing to our newsletter");
+        toastSuccess("Thanks for  Subscribing to our newsletter ");
       }
     } catch (error) {
-      console.error("An error occurred while fetching", error);
+      setDisabled(false);
+      toastError("Oops!! An error occurred while fetching");
     }
   };
 

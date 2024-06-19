@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/Container";
-import Navbar from "@/components/MobileNavBar";
+import Navbar from "@/components/navbars/MobileNavBar";
 import React from "react";
 
 function MiniHeading({ children }) {

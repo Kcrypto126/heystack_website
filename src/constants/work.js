@@ -1,7 +1,7 @@
 const work = [
   {
     src: "/content.png",
-    heading: "MINIMIZE OPTAMIZATION",
+    heading: "Minimize Optimizations",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
     link: "/content/minimize_returns",
@@ -9,28 +9,28 @@ const work = [
   {
     src: "/content.png",
     link: "/content/minimize_returns",
-    heading: "MINIMIZE OPTAMIZATION",
+    heading: "Minimize Optimizations",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
     src: "/content.png",
     link: "/content/minimize_returns",
-    heading: "MINIMIZE OPTAMIZATION",
+    heading: "Minimize Optimizations",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
     src: "/content.png",
     link: "/content/minimize_returns",
-    heading: "MINIMIZE OPTAMIZATION",
+    heading: "Minimize Optimizations",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
     src: "/content.png",
     link: "/content/minimize_returns",
-    heading: "MINIMIZE OPTAMIZATION",
+    heading: "Minimize Optimizations",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },

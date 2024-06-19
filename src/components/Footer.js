@@ -14,7 +14,6 @@ function Footer() {
             </p>
           </div>
           <p className="w-[14rem] md:text-left text-left ">
-            <span className="font-semibold">Company Headquarters</span> <br />8
             The Green #8138
             <br /> Dover, DE 19901
           </p>
@@ -99,10 +98,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400 py-2">
+      <span class="block text-sm text-gray-500 text-center dark:text-gray-400 py-2">
         © {new Date().getFullYear()}{" "}
         <a href="https://hey-stack.com/" class="hover:underline">
-          Hey-Stack™
+          Heystack™
         </a>
         . All Rights Reserved.
       </span>

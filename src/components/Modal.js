@@ -3,7 +3,7 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
-import ContactForm from "./ContactForm";
+import ContactForm from "./forms/ContactForm";
 
 export default function Modal({ open, setOpen }) {
   const cancelButtonRef = useRef(null);
@@ -85,7 +85,7 @@ export default function Modal({ open, setOpen }) {
                   </div>
                 </div>
 
-                <ContactForm />
+                <ContactForm setOpen={setOpen} />
 
                 <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                   <button

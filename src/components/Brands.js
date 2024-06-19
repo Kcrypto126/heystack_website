@@ -10,7 +10,7 @@ export default function Brands() {
 
   return (
     <div className="py-8 md:py-16" id="customers">
-      <p className="text-3xl font-bold text-center sm:text-4xl md:mb-8">
+      <p className="lg:text-4xl md:text-3xl text-2xl text-center font-bold md:mb-8">
         Brands that <span className="text-secondary">trust us</span>
       </p>
       <Slider items={firstHalf} />

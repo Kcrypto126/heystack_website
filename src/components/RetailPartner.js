@@ -52,7 +52,7 @@ function RetailPartner() {
                     {itemPair.map((item, index) => (
                       <div
                         key={index}
-                        className="relative w-[600px] h-[80px]   overflow-hidden flex items-center justify-center rounded-lg"
+                        className="relative md:w-[600px] w-[200px] h-[80px]   overflow-hidden flex items-center justify-center rounded-lg"
                       >
                         <Image
                           alt={item.name}

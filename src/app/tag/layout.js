@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 
-import NavBar from "@/components/NavBar";
-import MobileNavbar from "@/components/MobileNavBar";
+import NavBar from "@/components/navbars/NavBar";
+import MobileNavbar from "@/components/navbars/MobileNavBar";
 import Footer from "@/components/Footer";
 import { BlogsProvider } from "@/context/BlogContext";
 

@@ -2,9 +2,10 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
 import { ApolloWrapper } from "@/utils/apollo-wrapper";
-import MobileNavbar from "@/components/MobileNavBar";
+import MobileNavbar from "@/components/navbars/MobileNavBar";
 import Top from "@/components/Top";
-import Navbar from "@/components/MobileNavBar";
+import Navbar from "@/components/navbars/MobileNavBar";
+import ToastProvider from "@/providers/ToastProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,13 +21,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} scroll-smooth`}>
-        <ApolloWrapper>
-          <div className="sticky inset-0 z-50 block w-full lg:hidden">
-            <MobileNavbar />
-          </div>
-          {children}
-        </ApolloWrapper>
-        <Top />
+        <ToastProvider>
+          <ApolloWrapper>
+            <div className="sticky inset-0 z-50 block w-full lg:hidden">
+              <MobileNavbar />
+            </div>
+            {children}
+          </ApolloWrapper>
+          <Top />
+        </ToastProvider>
       </body>
     </html>
   );

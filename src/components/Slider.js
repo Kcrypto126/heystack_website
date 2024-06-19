@@ -65,20 +65,20 @@ export default function Slider({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "mt-2 md:mt-0 scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <div
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-2 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-2 md:py-4 py-3 w-max flex-nowrap",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {brands.map((item, idx) => (
-          <div className="w-44 h-full cursor-pointer" key={idx}>
+          <div className="lg:w-44 md:w-32 w-20 h-full cursor-pointer" key={idx}>
             <Image
               alt={item.name}
               src={item.src}

@@ -3,8 +3,7 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
-import ContactForm from "./ContactForm";
-import JobForm from "./JobForm";
+import JobForm from "./forms/JobForm";
 
 export default function JobModal({ open, setOpen }) {
   const cancelButtonRef = useRef(null);
@@ -58,7 +57,7 @@ export default function JobModal({ open, setOpen }) {
                     </div>
                   </div>
                 </div>
-                <JobForm />
+                <JobForm setOpen={setOpen} />
                 <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                   <button
                     type="button"

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { navLinks } from "@/constants/navlinks";
-import Modal from "./Modal";
+import Modal from "../Modal";
 function NavBar() {
   const [open, setOpen] = React.useState(false);
 

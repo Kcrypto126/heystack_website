@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import { toastError, toastSuccess } from "@/utils/toast";
 
-const ContactForm = () => {
+const ContactForm = ({ setOpen }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,13 +30,16 @@ const ContactForm = () => {
       });
 
       if (!response.ok) {
-        console.error("Server responded with an error", response);
+        toastError("Oops!! Server responded with an error");
       } else {
-        alert("Thanks for submitting the form! we will get back to you soon.");
+        toastSuccess(
+          "Thanks for submitting the form! we will get back to you soon."
+        );
       }
     } catch (error) {
-      console.error("An error occurred while fetching", error);
+      toastError("Oops!! An error occurred while fetching");
     }
+    setOpen(false);
   };
 
   return (

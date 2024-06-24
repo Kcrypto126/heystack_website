@@ -110,7 +110,7 @@ export function Form() {
 
 const NewsLetter = () => {
   return (
-    <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5 relative my-10">
+    <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5 relative my-10 ">
       <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:gap-10 gap-5 lg:p-10 md:p-8 p-5 bg-white shadow-md rounded-3xl lg:h-80 h-auto">
         <h1 className="lg:text-5xl md:text-4xl text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
           Hey Stack Articles Delivered straight to your inbox

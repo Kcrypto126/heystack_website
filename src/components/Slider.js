@@ -78,7 +78,7 @@ export default function Slider({
         )}
       >
         {brands.map((item, idx) => (
-          <div className="lg:w-44 md:w-32 w-20 h-full cursor-pointer" key={idx}>
+          <div className="lg:w-44 md:w-32 w-24 h-full cursor-pointer" key={idx}>
             <Image
               alt={item.name}
               src={item.src}

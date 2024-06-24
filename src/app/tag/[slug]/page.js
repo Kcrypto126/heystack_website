@@ -44,33 +44,35 @@ const Page = ({ params }) => {
   };
 
   return (
-    <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5 my-20">
-      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
-        Blog Categories
-      </h1>
-      <div className=" flex mx-auto gap-3 flex-wrap">
-        {allTags.map((item) => {
-          return <Badge href={item.slug} name={item.name} key={item.name} />;
-        })}
-      </div>
+    <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5 my-20 ">
+      <div className="px-6 md:px-8 lg:px-0">
+        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
+          Blog Categories
+        </h1>
+        <div className=" flex mx-auto gap-3 flex-wrap">
+          {allTags.map((item) => {
+            return <Badge href={item.slug} name={item.name} key={item.name} />;
+          })}
+        </div>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mx-auto">
-        {!loading && !error ? (
-          currentPosts.map(({ cursor, node }) => {
-            return <PostCard key={cursor} post={node} />;
-          })
-        ) : (
-          <p>Loading...</p>
-        )}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mx-auto">
+          {!loading && !error ? (
+            currentPosts.map(({ cursor, node }) => {
+              return <PostCard key={cursor} post={node} />;
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
+        <Paginate
+          postsPerPage={postsPerPage}
+          totalPosts={Posts.length}
+          currentPage={currentPage}
+          paginate={paginate}
+          previousPage={previousPage}
+          nextPage={nextPage}
+        />
       </div>
-      <Paginate
-        postsPerPage={postsPerPage}
-        totalPosts={Posts.length}
-        currentPage={currentPage}
-        paginate={paginate}
-        previousPage={previousPage}
-        nextPage={nextPage}
-      />
 
       <NewsLetter />
     </div>

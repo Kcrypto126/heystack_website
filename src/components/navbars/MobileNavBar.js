@@ -78,6 +78,7 @@ const Navbar = () => {
                             ? "/blogs"
                             : `/#${item.name.toLowerCase()}`
                         }
+                        onClick={toggleOpen}
                       >
                         {item.name}
                       </Link>

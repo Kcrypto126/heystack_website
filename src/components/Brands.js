@@ -9,12 +9,14 @@ export default function Brands() {
   const secondHalf = brands.slice(midpoint);
 
   return (
-    <div className="py-8 md:py-16" id="customers">
+    <div className="pt-10 md:py-16" id="customers">
       <p className="lg:text-4xl md:text-3xl text-2xl text-center font-bold md:mb-8">
-        Brands that <span className="text-secondary">trust us</span>
+        Brands that <span className="text-blue-500">trust us</span>
       </p>
-      <Slider items={firstHalf} />
-      <Slider items={secondHalf} direction="left" speed="slow" className="" />
+      <div className="my-5">
+        <Slider items={firstHalf} />
+        <Slider items={secondHalf} direction="left" speed="slow" className="" />
+      </div>
     </div>
   );
 }

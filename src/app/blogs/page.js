@@ -50,7 +50,7 @@ const Page = () => {
       {!loading && !error ? (
         <>
           {Posts[0] && <FeaturedPost post={Posts[0]} />}
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl lg:mx-auto gap-8 md:mx-8 mx-5">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-6xl lg:mx-auto gap-8 md:mx-8 mx-5 px-6 md:px-8 lg:px-0">
             {currentPosts.map(({ cursor, node }) => {
               return <PostCard key={cursor} post={node} />;
             })}
@@ -67,7 +67,7 @@ const Page = () => {
           <BookDemo />
         </>
       ) : (
-        <p>Loading...</p>
+        <LoadingScreen />
       )}
     </div>
   );

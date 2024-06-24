@@ -40,7 +40,7 @@ const PostData = ({ params }) => {
 
   return (
     <>
-      <div className="grid lg:grid-cols-3 grid-cols-1 max-w-7xl lg:mx-auto md:mx-8 mx-5 my-20 gap-8">
+      <div className="grid lg:grid-cols-3 grid-cols-1 max-w-7xl lg:mx-auto md:mx-8 mx-5 my-20 gap-8 ">
         <article className="max-w-4xl col-span-2">
           <PostHeader
             _title={title}

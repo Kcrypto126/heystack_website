@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
 import ContactForm from "./forms/ContactForm";
@@ -47,7 +47,7 @@ export default function Modal({ open, setOpen }) {
                         aria-hidden="true"
                       />
                     </div>
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                    <div className="mt-3 md:text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title
                         as="h3"
                         className="text-base font-semibold leading-6 text-gray-900"
@@ -62,7 +62,7 @@ export default function Modal({ open, setOpen }) {
                           leading brands in your vertical are using Heystack to
                           get answers to questions like:
                         </p>
-                        <ul className="list-disc my-2">
+                        <ul className="list-disc my-2 mx-2 md:mx-0">
                           <li className="mt-2 text-sm text-gray-500">
                             What is the overall customer perception and who is
                             the market leader?

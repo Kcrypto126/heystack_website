@@ -7,11 +7,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { navLinks } from "@/constants/navlinks";
 import Modal from "../Modal";
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setOpen(!open);
+const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
   };
 
   return (
@@ -41,64 +42,71 @@ const Navbar = () => {
             focus
             className="z-10 absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden"
           >
-            <div id="overlay"></div>
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 ">
-              <div className="px-5 pb-6 pt-5">
-                <div className="flex items-center justify-between">
-                  <div className="mr-auto flex gap-2 items-center justify-center">
-                    <Link href="/">
-                      <Image
-                        src={"/logo.png"}
-                        width={"28"}
-                        height="28"
-                        alt="logo"
-                      />
-                    </Link>
-                    <p className="text-[1.3rem] font-bold text-[#415082]">
-                      Heystack
-                    </p>
-                  </div>
-                  <div className="-mr-2">
-                    <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                      <span className="absolute -inset-0.5" />
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
-                  </div>
-                </div>
-              </div>
-              <div className="px-5 py-6">
-                <div className="grid grid-cols-1 gap-4  text-[1rem] font-[500]">
-                  {navLinks.map((item, ind) => (
-                    <div key={item.name}>
-                      <Link
-                        href={
-                          item.name === "Home"
-                            ? "/"
-                            : item.name === "Blogs"
-                            ? "/blogs"
-                            : `/#${item.name.toLowerCase()}`
-                        }
-                        onClick={toggleOpen}
-                      >
-                        {item.name}
-                      </Link>
+            {({ close }) => (
+              <>
+                <div id="overlay"></div>
+                <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 ">
+                  <div className="px-5 pb-6 pt-5">
+                    <div className="flex items-center justify-between">
+                      <div className="mr-auto flex gap-2 items-center justify-center">
+                        <Link href="/">
+                          <Image
+                            src={"/logo.png"}
+                            width={"28"}
+                            height="28"
+                            alt="logo"
+                          />
+                        </Link>
+                        <p className="text-[1.3rem] font-bold text-[#415082]">
+                          Heystack
+                        </p>
+                      </div>
+                      <div className="-mr-2">
+                        <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                          <span className="absolute -inset-0.5" />
+                          <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                        </Popover.Button>
+                      </div>
                     </div>
-                  ))}
-                  <div className="bg-[#4150821C] px-4 py-2 rounded-md border-[#415082] border-[1.5px] text-center mt-10">
-                    <button
-                      className="text-[#415082] font-semibold "
-                      onClick={toggleOpen}
-                    >
-                      SEE LIVE IN ACTION
-                    </button>
+                  </div>
+                  <div className="px-5 py-6">
+                    <div className="grid grid-cols-1 gap-4  text-[1rem] font-[500]">
+                      {navLinks.map((item, ind) => (
+                        <div key={item.name}>
+                          <Link
+                            href={
+                              item.name === "Home"
+                                ? "/"
+                                : item.name === "Blogs"
+                                ? "/blogs"
+                                : `/#${item.name.toLowerCase()}`
+                            }
+                            onClick={() => close()}
+                          >
+                            {item.name}
+                          </Link>
+                        </div>
+                      ))}
+                      <div className="bg-[#4150821C] px-4 py-2 rounded-md border-[#415082] border-[1.5px] text-center mt-10">
+                        <button
+                          className="text-[#415082] font-semibold "
+                          onClick={() => {
+                            openModal();
+                            close();
+                          }}
+                        >
+                          SEE LIVE IN ACTION
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <Modal open={open} setOpen={setOpen} />
-            </div>
+              </>
+            )}
           </Popover.Panel>
         </Transition>
       </Popover>
+      <Modal open={isModalOpen} setOpen={setIsModalOpen} />
     </div>
   );
 };

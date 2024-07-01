@@ -30,15 +30,9 @@ const JobForm = ({ setOpen }) => {
         },
         body: JSON.stringify(formData),
         query: { type: "career " },
-      });
+      }).then((res) => res.json());
 
-      if (!response.ok) {
-        toastError("Oops!! Server responded with an error");
-      } else {
-        toastSuccess(
-          "Thanks for submitting the form! we will get back to you soon."
-        );
-      }
+      toastSuccess(response?.status || "Thank you for reaching out!");
     } catch (error) {
       toastError("Oops!! An error occurred while fetching");
     }

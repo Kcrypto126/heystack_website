@@ -12,7 +12,7 @@ function Work() {
             How brands leverage Heystack Insights
           </p>
         </div>
-        <div className="md:mt-16  lg:mx-auto flex flex-col md:gap-32 gap-16  px-6 md:px-8 lg:px-0">
+        <div className="md:mt-16 w-[100%]  lg:mx-auto flex flex-col md:gap-32 gap-16  px-6 md:px-8 lg:px-0">
           {work.map((item, ind) => (
             <div
               className={`flex 
@@ -45,13 +45,13 @@ function Work() {
                 </Link>
                 <span className="h-[0.5px] w-[90%] bg-gray-300"></span>
               </div>
-              <div className="md:basis-[60%] md:mt-0 mt-2 flex justify-center lg:items-center relative">
+              <div className="md:basis-[60%] md:mt-0 mt-2 flex justify-center items-center relative">
                 <Image
                   src={item.src}
                   height={"150"}
                   width={"350"}
                   alt="content"
-                  className="relative z-20  rounded-lg"
+                  className="relative z-20 md:w-full  rounded-lg"
                 />
               </div>
             </div>

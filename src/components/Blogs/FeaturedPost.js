@@ -14,10 +14,10 @@ const FetauredPostDetails = ({ post }) => {
         />
       </div>
       <div>
-        <h1 className="font-semibold py-4 text-3xl hover:text-page">
+        <h1 className="font-semibold py-4 md:text-3xl text-xl hover:text-page">
           <Link href={`/blogs/${slug}`}>{title}</Link>
         </h1>
-        <p className="text-[#676767] py-2">{summary}</p>
+        <p className="text-[#676767] ,md:py-2 pb-3 text-sm">{summary}</p>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center justify-center">
             <Link href={`/blogs/${slug}`}>
@@ -44,13 +44,13 @@ const FetauredPostDetails = ({ post }) => {
 
 const FeaturedPost = ({ post }) => {
   return (
-    <div className="bg-[#EAF0FF] w-full my-10 py-10 px-6 md:px-8 lg:px-0">
+    <div className="bg-[#EAF0FF] w-full my-10 py-10 px-2 md:px-5 lg:px-0">
       <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
           Hey-Stack Blogs
         </h1>
         <p className="py-2">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, nemo.
+          Your go-to place for actionale insights and strategies on everything.
         </p>
         <p className="font-bold text-2xl py-4">Latest Post</p>
         <FetauredPostDetails post={post} />

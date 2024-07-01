@@ -45,7 +45,7 @@ const Page = ({ params }) => {
 
   return (
     <div className="max-w-6xl lg:mx-auto md:mx-8 mx-5 my-20 ">
-      <div className="px-6 md:px-8 lg:px-0">
+      <div className="px-2 md:px-5 lg:px-0">
         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4">
           Blog Categories
         </h1>

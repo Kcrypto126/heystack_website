@@ -35,15 +35,13 @@ export function Form() {
         },
         body: JSON.stringify(formData),
         query: { type: "career " },
-      });
+      }).then((res) => res.json());
 
-      if (!response.ok) {
-        toastError("Oops!! Server responded with an error");
-      } else {
-        setDisabled(false);
-        setSuccssMessage("Thanks for Subscribing to our newsletter");
-        toastSuccess("Thanks for  Subscribing to our newsletter ");
-      }
+      setDisabled(false);
+      setSuccssMessage("Thanks for Subscribing to our newsletter");
+      toastSuccess(
+        response?.status || "Thanks for Subscribing to our newsletter"
+      );
     } catch (error) {
       setDisabled(false);
       toastError("Oops!! An error occurred while fetching");

@@ -70,7 +70,8 @@ import {
   vornado,
   wolverine,
   zilla,
-} from "../assets/brandlogos/index";
+  justfoodfordogs,
+} from "../assets/BrandsFinal/index";
 
 const brands = [
   {
@@ -284,6 +285,9 @@ const brands = [
   },
   {
     src: zilla,
+  },
+  {
+    src: justfoodfordogs,
   },
 ];
 

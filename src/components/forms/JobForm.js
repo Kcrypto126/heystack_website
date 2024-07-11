@@ -29,7 +29,7 @@ const JobForm = ({ setOpen }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-        query: { type: "career " },
+        query: { type: "career" },
       }).then((res) => res.json());
 
       toastSuccess(response?.status || "Thank you for reaching out!");

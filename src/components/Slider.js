@@ -23,7 +23,6 @@ export default function Slider({
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
-      // Duplicate content to create a seamless scrolling effect
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
@@ -31,7 +30,6 @@ export default function Slider({
         }
       });
 
-      // Set custom properties for animation
       setAnimationProperties();
       setStart(true);
     }
@@ -39,23 +37,21 @@ export default function Slider({
 
   const setAnimationProperties = () => {
     if (containerRef.current) {
-      // Set direction
       containerRef.current.style.setProperty(
         "--animation-direction",
         direction === "left" ? "reverse" : "forwards"
       );
 
-      // Set speed
       let duration;
       switch (speed) {
         case "fast":
-          duration = "120s"; // Faster speed, shorter duration
+          duration = "260s";
           break;
         case "normal":
-          duration = "240s"; // Normal speed
+          duration = "290s";
           break;
         default:
-          duration = "280s"; // Slow speed, longer duration
+          duration = "520s"; // Slow speed
       }
       containerRef.current.style.setProperty("--animation-duration", duration);
     }
@@ -72,18 +68,21 @@ export default function Slider({
       <div
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-2 md:py-4 py-3 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {brands.map((item, idx) => (
-          <div className="lg:w-44 md:w-32 w-24 h-full cursor-pointer" key={idx}>
+          <div
+            className="w-28 h-10 sm:w-full sm:h-28 md:w-40 md:h-24 lg:w-52 lg:h-28 flex items-center justify-center cursor-pointer"
+            key={idx}
+          >
             <Image
               alt={item.name}
               src={item.src}
-              width={64}
-              height={64}
+              width={128}
+              height={128}
               className="w-full h-full object-contain"
               priority
             />

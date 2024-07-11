@@ -6,7 +6,7 @@ export default function Brands() {
   const midpoint = Math.ceil(brands.length / 2);
 
   const firstHalf = brands.slice(0, midpoint - 1);
-  const secondHalf = brands.slice(midpoint);
+  const secondHalf = brands.slice(midpoint, brands.length).reverse();
 
   return (
     <div className="pt-10 md:py-16" id="customers">

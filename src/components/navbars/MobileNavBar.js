@@ -20,8 +20,14 @@ const Navbar = () => {
       <Popover className="bg-[#e4ecff]">
         <div className="px-2 py-3 lg:hidden flex justify-between w-full">
           <div className="mr-auto flex gap-2 items-center justify-center">
-            <Image src={"/logo.png"} width={"28"} height="28" alt="logo" />
-            <p className="text-[1.3rem] font-bold text-[#415082]">Heystack</p>
+            <Link href="/">
+              <Image src={"/logo.png"} width={"28"} height="28" alt="logo" />
+            </Link>
+            <Link href="/">
+              <p className="text-[1.3rem] font-bold text-[#415082] block z-20">
+                Heystack
+              </p>
+            </Link>
           </div>
           <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
             <span className="absolute -inset-0.5" />

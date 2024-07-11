@@ -23,8 +23,11 @@ export function Form() {
     setDisabled(true);
 
     const formData = {
-      email,
-      type: "newsletter",
+      name: "Newsletter",
+      subject: "Newsletter Subscription",
+      email: email,
+      type: "subscribe",
+      message: "Newsletter Subscription",
     };
 
     try {
@@ -34,8 +37,10 @@ export function Form() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-        query: { type: "career " },
+        query: { type: "subscribe" },
       }).then((res) => res.json());
+
+      console.log(response);
 
       setDisabled(false);
       setSuccssMessage("Thanks for Subscribing to our newsletter");

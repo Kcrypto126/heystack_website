@@ -54,19 +54,19 @@ const Navbar = () => {
                 <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 ">
                   <div className="px-5 pb-6 pt-5">
                     <div className="flex items-center justify-between">
-                      <div className="mr-auto flex gap-2 items-center justify-center">
-                        <Link href="/">
+                      <Link href="/" onClick={() => close()}>
+                        <div className="mr-auto flex gap-2 items-center justify-center">
                           <Image
                             src={"/logo.png"}
                             width={"28"}
                             height="28"
                             alt="logo"
                           />
-                        </Link>
-                        <p className="text-[1.3rem] font-bold text-[#415082]">
-                          Heystack
-                        </p>
-                      </div>
+                          <p className="text-[1.3rem] font-bold text-[#415082]">
+                            Heystack
+                          </p>
+                        </div>
+                      </Link>
                       <div className="-mr-2">
                         <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                           <span className="absolute -inset-0.5" />

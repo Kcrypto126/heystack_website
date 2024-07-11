@@ -75,7 +75,7 @@ export default function Slider({
       >
         {brands.map((item, idx) => (
           <div
-            className="w-28 h-10 sm:w-full sm:h-28 md:w-40 md:h-24 lg:w-52 lg:h-28 flex items-center justify-center cursor-pointer"
+            className="w-28 h-[72px] sm:w-full sm:h-32 md:w-40 md:h-24 lg:w-52 lg:h-28 flex items-center justify-center cursor-pointer"
             key={idx}
           >
             <Image
@@ -83,7 +83,7 @@ export default function Slider({
               src={item.src}
               width={128}
               height={128}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover md:object-contain"
               priority
             />
           </div>

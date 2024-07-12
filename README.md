@@ -1,17 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Heystack Server Setup
 
-## Getting Started
+A breif description of what we have to do
 
-First, run the development server:
+### On AWS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- navigate to heystack folder
+- run npm run build
+- make sure pm2 is installed ( sudo npm install pm2 -g )
+- pm2 start ecosystem.config.js
+- pm2 save
+- pm2 startup systemd
+- sudo env PATH=$PATH:/home/bitnami/.nvm/versions/node/v16.20.2/bin /home/bitnami/.nvm/versions/node/v16.20.2/lib/node_modules/pm2/bin/pm2 startup systemd -u bitnami --hp /home/bitnami
+- pm2 status
+- pm2 list
+- pm2 logs
+- copy files ( cp -a Hey-Stack/. heystack/ ) ( if you have other folder )
+```

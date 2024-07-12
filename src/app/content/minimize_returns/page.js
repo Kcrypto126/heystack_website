@@ -10,7 +10,7 @@ const page = () => {
 
       <div className="flex flex-col lg:flex-row items-center justify-center lg:mt-10 my-5 lg:gap-8 max-w-6xl lg:mx-auto md:mx-8 mx-4">
         <Image
-          src={"/content.png"}
+          src={"/work/content.png"}
           height={"120"}
           width={"320"}
           alt="content"

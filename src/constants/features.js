@@ -1,36 +1,36 @@
 export const featuresData = [
   {
-    icon: "/brain.svg",
+    icon: "/features/Brain.svg",
     title: "Robust & Massively trained models",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
-    icon: "/Data.svg",
+    icon: "/features/Data.svg",
     title: "Data From Everywhere & Anywhere",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
-    icon: "/key.svg",
+    icon: "/features/Key.svg",
     title: "Data From Everywhere & Anywhere",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
-    icon: "/Business.svg",
+    icon: "/features/Business.svg",
     title: "Robust & Massively trained models",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
-    icon: "/Business 2.svg",
+    icon: "/features/Business_2.svg",
     title: "Data From Everywhere & Anywhere",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",
   },
   {
-    icon: "/Business.svg",
+    icon: "/features/Business.svg",
     title: "Data From Everywhere & Anywhere",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet scelerisque eros, sed tempor velit consectetur in. Morbi tincidunt",

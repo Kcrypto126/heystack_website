@@ -6,6 +6,8 @@ A breif description of what we have to do
 
 ```
 - navigate to heystack folder
+- npm i
+- vim .env ( add envs )
 - run npm run build
 - make sure pm2 is installed ( sudo npm install pm2 -g )
 - pm2 start ecosystem.config.js

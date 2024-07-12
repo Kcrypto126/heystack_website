@@ -21,7 +21,6 @@ const Author = ({ writer }) => {
           ut deleniti fuga sit ad nemo?
         </p>
         <div className="flex flex-row gap-3 mx-2">
-          <Link href={"www.google.com"}>{twitter_logo}</Link>
           <Link href={"www.google.com"}>{linkedIn_logo}</Link>
         </div>
       </div>

@@ -49,7 +49,6 @@ import pepsico from "./pepsico.svg";
 import quaker from "./quaker.svg";
 import reef from "./reef.svg";
 import rold_gold from "./rold_gold.svg";
-import ruffels from "./ruffels.svg";
 import ruffles from "./ruffles.svg";
 import sabra from "./sabra.svg";
 import sabritones from "./sabritones.svg";
@@ -122,7 +121,6 @@ export {
   quaker,
   reef,
   rold_gold,
-  ruffels,
   ruffles,
   sabra,
   sabritones,

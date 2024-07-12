@@ -36,8 +36,8 @@ function Work() {
                 >
                   <Image
                     src={"/arrow.svg"}
-                    width="200"
-                    height="100"
+                    width={200}
+                    height={100}
                     alt="btn"
                     className="cursor-pointer"
                     draggable={false}

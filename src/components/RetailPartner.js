@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { partners } from "@/constants/partners";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import Container from "./Container";
 import { Navigation } from "swiper/modules";
@@ -13,6 +12,28 @@ import "swiper/css";
 
 function RetailPartner() {
   const [swiper, setSwiperInstance] = React.useState(null);
+  const [width, setWidth] = useState(150);
+  const [height, setHeight] = useState(100);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth < 640) {
+        setHeight(80); // Small devices
+        setWidth(100); // Small devices
+      } else {
+        setHeight(100); // Medium devices
+        setWidth(150); // Medium devices
+      }
+    };
+
+    // Initial width setting
+    updateWidth();
+
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <Container>
       <div className="w-full mx-auto mt-8 px-5" id="retailers">
@@ -23,11 +44,10 @@ function RetailPartner() {
           <div className="">
             <Swiper
               onSwiper={(swiper) => setSwiperInstance(swiper)}
-              spaceBetween={30}
+              spaceBetween={20}
               initialSlide={1}
               slidesPerView={1}
               loop={true}
-              reversedirection
               autoplay={true}
               breakpoints={{
                 320: {
@@ -47,18 +67,21 @@ function RetailPartner() {
                 if (index % 2 === 0) result.push(array.slice(index, index + 2));
                 return result;
               }, []).map((itemPair, ind) => (
-                <SwiperSlide key={ind} className="relative py-10 px-5">
+                <SwiperSlide key={ind} className="relative py-10 ">
                   <div className="flex flex-col items-center justify-center md:gap-10 gap-5">
                     {itemPair.map((item, index) => (
                       <div
                         key={index}
-                        className="relative md:w-[600px] w-[200px] h-[80px]   overflow-hidden flex items-center justify-center rounded-lg"
+                        className="relative  h-[80px]   overflow-hidden flex items-center justify-center rounded-lg"
                       >
                         <Image
                           alt={item.name}
                           src={item.src}
-                          layout="cover"
-                          className="grayscale w-64 h-full object-cover"
+                          height={height}
+                          width={width}
+                          className="grayscale w-64 h-full object-cover cursor-pointer"
+                          priority="high"
+                          draggable={false}
                         />
                       </div>
                     ))}

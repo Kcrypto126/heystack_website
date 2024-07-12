@@ -16,7 +16,7 @@ const page = () => {
           alt="content"
           className="relative z-20 w-full rounded-lg my-2"
         />
-        <h4 className="max-w-xl py-5 lg:py-0">
+        <h4 className="max-w-xl py-5  lg:py-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
           laudantium officia sequi vero, praesentium atque quidem culpa
           dignissimos dolorem consequuntur? Molestias, atque tenetur! Lorem
@@ -26,7 +26,7 @@ const page = () => {
         </h4>
       </div>
 
-      <section className="max-w-6xl  my-10 lg:mx-auto md:mx-8 mx-4 text-sm">
+      <section className="max-w-6xl  my-10 lg:mx-auto md:mx-8 mx-4 ">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit
           impedit possimus. Odio similique facere laborum, fugiat atque est.

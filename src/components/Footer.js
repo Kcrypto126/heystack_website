@@ -98,9 +98,9 @@ function Footer() {
           </div>
         </div>
       </div>
-      <span class="block text-sm text-gray-500 text-center dark:text-gray-400 py-2">
+      <span className="block text-sm text-gray-500 text-center dark:text-gray-400 py-2">
         © {new Date().getFullYear()}{" "}
-        <a href="https://hey-stack.com/" class="hover:underline">
+        <a href="https://hey-stack.com/" className="hover:underline">
           Heystack™
         </a>
         . All Rights Reserved.

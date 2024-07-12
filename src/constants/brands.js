@@ -50,7 +50,6 @@ import {
   quaker,
   reef,
   rold_gold,
-  ruffels,
   ruffles,
   sabra,
   sabritones,
@@ -229,7 +228,7 @@ const brands = [
     src: rold_gold,
   },
   {
-    src: ruffels,
+    src: ruffles,
   },
 
   {

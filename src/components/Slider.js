@@ -79,7 +79,7 @@ export default function Slider({
             key={idx}
           >
             <Image
-              alt={item.name}
+              alt={`${item.name}`}
               src={item.src}
               width={128}
               height={128}

@@ -4,7 +4,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="max-w-7xl mx-auto">
-      <h1 className="lg:text-5xl md:text-4xl text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4 max-w-7xl mx-auto ">
+      <h1 className="mt-20  lg:mt-0 text-center lg:text-left lg:text-5xl md:text-4xl text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-radial from-[#D75A00] via-[#EC276E] to-[#542DE8] py-4 max-w-7xl mx-auto ">
         Minimize Returns
       </h1>
 
@@ -16,7 +16,7 @@ const page = () => {
           alt="content"
           className="relative z-20 w-full rounded-lg my-2"
         />
-        <h4 className="max-w-xl">
+        <h4 className="max-w-xl py-5 lg:py-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
           laudantium officia sequi vero, praesentium atque quidem culpa
           dignissimos dolorem consequuntur? Molestias, atque tenetur! Lorem
@@ -26,7 +26,7 @@ const page = () => {
         </h4>
       </div>
 
-      <section className="max-w-6xl  my-10 lg:mx-auto md:mx-8 mx-4">
+      <section className="max-w-6xl  my-10 lg:mx-auto md:mx-8 mx-4 text-sm">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit
           impedit possimus. Odio similique facere laborum, fugiat atque est.

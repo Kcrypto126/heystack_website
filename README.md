@@ -97,7 +97,7 @@ Replace with your actual GraphCMS project API endpoint. The app uses this for bl
 
 ## 🖼 Screenshots
 
-![Hey-Stack home page screenshot](https://raw.githubusercontent.com/Kcrypto126/heystack_website/refs/heads/main/public/screencapture-file-E-my-projects-4-Next-to-HTML-convert-project-Navin-Heystack-HTML-index-html-2026-02-07-17_46_14.png)
+![home page screenshot](https://raw.githubusercontent.com/Kcrypto126/heystack_website/refs/heads/main/public/screencapture-file-E-my-projects-4-Next-to-HTML-convert-project-Navin-Heystack-HTML-index-html-2026-02-07-17_46_14.png)
 
 
 

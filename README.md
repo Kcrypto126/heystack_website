@@ -56,7 +56,7 @@ Hey-Stack is a marketing/landing website for a feedback data platform. It provid
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/heystack_website.git
+git clone https://github.com/Kcrypto126/heystack_website.git
 
 # Navigate to the project directory
 cd heystack_website
@@ -98,9 +98,7 @@ Replace with your actual GraphCMS project API endpoint. The app uses this for bl
 
 ## 🖼 Screenshots
 
-Add demo images, GIFs, or UI preview screenshots here.
 
-_Example: Home hero, blog listing, or feature sections._
 
 
 
@@ -118,11 +116,10 @@ Blog content is fetched via GraphQL from GraphCMS (queries in `src/services/quer
 
 ## 📬 Contact
 
-- **Project:** Hey-Stack
-- **Author:** Your Name
-- **Email:** your.email@example.com
-- **GitHub:** @yourgithub
-- **Website/Portfolio:** yourwebsite.com
+- **Author:** Kaori Fujio
+- **Email:** superdev19782@gmail.com
+- **GitHub:** @kcrypto126
+- **Website/Portfolio:** https://kaorifujio19782.vercel.app/
 
 
 

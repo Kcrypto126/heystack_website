@@ -1,7 +1,6 @@
 # 🧭 Hey-Stack (P-142)
 
-A feedback data platform to get a 360° view of customer perception of your products. Understand the **why** behind the **what** and get actionable insights.
-
+This is a task to convert a simple blog website from HTML-based to Next.js and Node.js-based.
 
 
 ## 📚 Table of Contents
